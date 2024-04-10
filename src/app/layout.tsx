@@ -4,6 +4,8 @@ import "./globals.css";
 import Link from "next/link";
 import Logo from "@/components/Atoms/Logo/Logo";
 import SideLeft from "@/components/Molecules/SideLeft/SideLeft";
+import { InputSearch } from "@/components/Molecules/Search";
+import { AfteLogin, BfLogin } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,18 +27,25 @@ export default function RootLayout({
             <Link href={"#"}>
               <Logo />
             </Link>
-            <div className="flex flex-row gap-4 items-center ">
-              <button className="text-white">Hello</button>
-              <Link href={"#"}>hello</Link>
+           
+            <div className="flex flex-row justify-between items-center gap-5 ">
+                <div >
+                   <InputSearch/>
+                </div>
+                  {/* <BfLogin/> */} 
+                  <AfteLogin/>
             </div>
           </div>
         </nav>
         {children}
+
+
         <aside>
-          <aside className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 ">
+          <aside className="fixed top-5 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 ">
             <SideLeft />
           </aside>
         </aside>
+        
       </body>
     </html>
   );
