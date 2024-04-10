@@ -6,14 +6,11 @@ interface ButtonCategoriesProps {
     description: string;
     icon: string;
 }
-const handleOnclick=()=>{
-  alert("hello")
-  }
 const ButtonCategories:React.FC<ButtonCategoriesProps> = ({title,description,icon}) => {
   return (
-<div className=" mt-2">
-  <div className=' w-[250] lg:w-[400px] ml-14 m-auto lg:m-auto'>
-      <button onClick={handleOnclick} className=" w-[123px] lg:w-[450px] lg:h-[100px] float-left m-2 hover:bg-slate-200 h-[120px] px-[3px] flex items-center justify-between rounded-[16px] border border-gray-600">
+<div className=" mt-2 ">
+  <div className=' w-[250] lg:m-auto flex'>
+      <button className=" flex-1 w-[123px] lg:w-[450px] lg:h-[100px] m-2 hover:bg-slate-200 h-[120px] px-[3px] flex items-center justify-between rounded-[16px] border border-gray-600">
         <div className="lg:flex lg:items-center lg:space-x-[15px] lg:ml-2">
           <Image src={icon} alt="categories-icon" width={50} height={50} className='ml-8' />
           <div className="flex items-start justify-start flex-col">
