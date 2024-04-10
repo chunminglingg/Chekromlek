@@ -24,7 +24,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {hideNavbarFooter ? null : (
-          <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 ">
+          
+          <nav className="fixed top-0 z-40 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 ">
             <div className="px-3 py-3 lg:px-5 lg:pl-3 flex justify-between">
               <Link href={"#"}>
                 <Logo />
@@ -36,11 +37,13 @@ export default function RootLayout({
             </div>
           </nav>
         )}
-
+        <div className="flex justify-center items-center h-full">
+          <div className="h-[200px]"></div>
         {children}
+        </div>
         {hideNavbarFooter ? null : (
           <aside>
-            <aside className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 ">
+            <aside className="fixed top-0 left-0 z-30 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 ">
               <SideLeft />
             </aside>
           </aside>
