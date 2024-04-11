@@ -1,4 +1,3 @@
-"use client";
 import Logo from "@/components/Atoms/Logo/Logo";
 import SideLeft from "@/components/Molecules/SideLeft/SideLeft";
 import Link from "next/link";
@@ -7,7 +6,6 @@ export default function Home() {
   return (
     <>
       <button>hello</button>
-
     </>
   );
 }
