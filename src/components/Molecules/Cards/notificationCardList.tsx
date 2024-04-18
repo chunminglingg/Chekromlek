@@ -1,6 +1,6 @@
-import { NotificationUserProps } from "@/app/[notification]/page";
-import { NotificationCard } from "@/components";
 import React from "react";
+import { NotificationCard } from "./notificationCard";
+import { NotificationUserProps } from "@/app/(notification)/notification/page";
 
 interface CardListProps {
   items: NotificationUserProps[];

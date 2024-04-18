@@ -1,6 +1,6 @@
 "use client";
 
-import { NotificationCard } from "@/components";
+import { NotificationCard } from "@/components/Molecules/Cards/notificationCard";
 import React, { useState } from "react";
 export interface NotificationUserProps {
   id: string;
