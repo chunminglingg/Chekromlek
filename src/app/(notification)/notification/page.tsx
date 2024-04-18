@@ -28,7 +28,7 @@ const NotificationPage = () => {
           <NotificationCard
             id="1"
             userName="Tan hangsapho"
-            image="/img/pf.jpg"
+            image="/imgs/mypf.jpg"
             description="Lorem ipsum dolor sit amet, consectetur adipiscingelit"
             selectCard={selectedCard}
             onSelectCard={handleSelectCard}
@@ -36,7 +36,7 @@ const NotificationPage = () => {
           <NotificationCard
             id="2"
             userName="Tieng kimlang"
-            image="/img/pf.jpg"
+            image="/imgs/mypf.jpg"
             description="Lorem ipsum dolor sit amet, consectetur adipiscingelit"
             selectCard={selectedCard}
             onSelectCard={handleSelectCard}
@@ -44,7 +44,7 @@ const NotificationPage = () => {
           <NotificationCard
             id="3"
             userName="Tieng kimlang"
-            image="/img/pf.jpg"
+            image="/imgs/mypf.jpg"
             description="Lorem ipsum dolor sit amet, consectetur adipiscingelit"
             selectCard={selectedCard}
             onSelectCard={handleSelectCard}
@@ -57,7 +57,7 @@ const NotificationPage = () => {
           <NotificationCard
             id="4"
             userName="Tieng kimlang"
-            image="/img/pf.jpg"
+            image="/imgs/mypf.jpg"
             description="Lorem ipsum dolor sit amet, consectetur adipiscingelit"
             selectCard={selectedCard}
             onSelectCard={handleSelectCard}
@@ -65,7 +65,7 @@ const NotificationPage = () => {
           <NotificationCard
             id="5"
             userName="Tieng kimlang"
-            image="/img/pf.jpg"
+            image="/imgs/mypf.jpg"
             description="Lorem ipsum dolor sit amet, consectetur adipiscingelit"
             selectCard={selectedCard}
             onSelectCard={handleSelectCard}
@@ -73,7 +73,7 @@ const NotificationPage = () => {
           <NotificationCard
             id="6"
             userName="Tieng kimlang"
-            image="/img/pf.jpg"
+            image="/imgs/mypf.jpg"
             description="Lorem ipsum dolor sit amet, consectetur adipiscingelit"
             selectCard={selectedCard}
             onSelectCard={handleSelectCard}
