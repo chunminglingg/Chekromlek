@@ -1,4 +1,3 @@
-import Nav from "@/components/Organisms/navbar/Nav"
 
 export const metadata = {
   title: 'Next.js',
