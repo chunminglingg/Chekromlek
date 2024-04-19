@@ -9,7 +9,7 @@ const Modal = () => {
   return (
     <div  >
       <div
-      className=" w-[300px] mt-[10%] min-sm:mt-[15%] min-sm:ms-[10%]"
+      className=" w-[300px] mt-[10%] min-sm:mt-[15%] min-md:ms-[10%]"
       onClick={() => setModalState(true)}>
       <Post />
       </div>

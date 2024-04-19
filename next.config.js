@@ -1,5 +1,5 @@
 // next.config.js
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   webpack(config, options) {
@@ -7,7 +7,7 @@ module.exports = {
       test: /\.svg$/,
       use: [
         {
-          loader: '@svgr/webpack',
+          loader: "@svgr/webpack",
           options: {
             svgoConfig: {
               plugins: {
@@ -20,5 +20,14 @@ module.exports = {
     });
 
     return config;
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: true,
+      },
+    ];
   },
 };

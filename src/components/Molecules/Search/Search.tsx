@@ -124,7 +124,7 @@ const InputSearch: React.FC = () => {
         </button>
       ) : (
 
-        <label className="relative block w-[100%]">
+        <label className="relative block w-[150%]">
       <span className="absolute inset-y-0 left-0 flex items-center pl-1">
         <svg
           width="28"
