@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import "../../../globals.css"
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -33,8 +34,8 @@ const page = () => {
         <input type="email" className="border w-[92%] h-[50px] p-4 rounded-xl" placeholder="yourname@example.com"/>
       </div>
       <div className="flex flex-row gap-3 absolute bottom-6 right-5">
-        <button className="px-6 py-3 bg-slate-600 text-white rounded-xl hover:bg-slate-500">Cancel</button>
-        <button className="px-6 py-3 bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%]">Search</button>
+        <Link href={"/login"} ><button className="px-6 py-3 bg-slate-600 text-white rounded-xl hover:bg-slate-500">Cancel</button></Link>
+        <Link href={"/login/newpass"}><button className="px-6 py-3 bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%]">Search</button></Link>
       </div>
     </div>
   </div>

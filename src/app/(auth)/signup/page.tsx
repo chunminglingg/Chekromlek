@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
+import "../../globals.css"
 
 const pages = () => {
   return (
@@ -23,7 +24,9 @@ const pages = () => {
             aria-label="form"
             className="mt-[10%] flex flex-col items-center"
           >
-            <Image alt="panel" src={"login/logo.svg"} width={120} height={60} />
+          <Link href={"/"}>
+            <button>  <Image alt="panel" src={"login/logo.svg"} width={120} height={60} /></button>
+          </Link>
             <div>
               <form action="login" className="mt-5 flex flex-col gap-3">
               <input
@@ -43,12 +46,14 @@ const pages = () => {
                 />
           
                 <div className="flex flex-col items-center mt-4">
-                  <button
+                <Link href={"/"}>
+                <button
                     type="submit"
                     className="w-[200px] h-[60px] bg-[#7B2CBF] hover:bg-[#d1b6f6] text-white rounded-lg "
                   >
                     Sign up
                   </button>
+                </Link>
                 </div>
                 <p className="text-center text-gray-400">
                   _____________________
@@ -58,8 +63,8 @@ const pages = () => {
                 <p className="text-center text-[#434A4F] ">
                   Already have account ?{" "}
                   <Link
-                    href={"#"}
-                    className="text-[#9747FF] hover:bg-[#d1b6f6]"
+                    href={"/login"}
+                    className="text-[#9747FF] hover:text-[#d1b6f6]"
                   >
                     Log in
                   </Link>
