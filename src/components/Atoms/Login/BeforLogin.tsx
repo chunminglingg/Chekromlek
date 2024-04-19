@@ -1,15 +1,25 @@
-import Link from "next/link";
 import React from "react";
-import { Button } from "../Button";
 
-export default function BeforLogin() {
+
+interface BeforeLoginProps {
+  onLogin: Function; // Define the type of onLogin prop
+}
+
+const BeforeLogin: React.FC<BeforeLoginProps> = ({ onLogin }) => {
+  const handleLogin = () => {
+    if (typeof onLogin === "function") {
+      onLogin();
+    }
+  };
+
   return (
 
     // BeforLogin
     <div className=" flex gap-2 items-end justify-end ">
-        <Button className=" w-[130px] h-[40px] broder rounded-lg bg-purple-600 hover:bg-teal-400">
+        <button  className=" w-[130px] h-[40px] broder rounded-lg bg-purple-600 hover:bg-teal-400"
+        onClick={handleLogin} >
           Login
-        </Button>
+        </button>
       <div>
         <svg
           width="34"
@@ -45,7 +55,6 @@ export default function BeforLogin() {
       </div>
     </div>
 
-
-
   );
 }
+export default BeforeLogin;

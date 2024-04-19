@@ -4,7 +4,7 @@ export default function Post() {
   return (
     <div>
       {/* svg profile */}
-      <div className="sm:w-[447px] h-[70px] flex items-center justify-between border rounded-lg border-slate-100 transition-transform -translate-x-full sm:translate-x-1/2 max-sm:m-auto">
+      <div className=" md:w-[447px] flex items-center justify-between border rounded-lg border-slate-100 transition-transform -translate-x-full sm:translate-x-1/2 max-sm:mt-[10%] md:h-[70px] sm:w-[253px] sm:mt-[10%] sm:h-[35px] hover:bg-slate-100">
        <div className="flex items-center justify-between gap-2 ms-[2%]">
         <svg
           width="42"
@@ -21,7 +21,7 @@ export default function Post() {
           />
           <rect x="4" y="4" width="34" height="34" rx="17" stroke="#968FE5" />
         </svg>
-      <p className="text-zinc-300 flex items-start justify-start">Create Post...</p>
+      <p className="text-zinc-300 flex items-start justify-start ">Create Post...</p>
       </div>
       <div className="me-[3%]">
         <svg

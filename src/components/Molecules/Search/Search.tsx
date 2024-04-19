@@ -20,7 +20,7 @@
 //           viewBox="0 0 32 32"
 //           fill="none"
 //           xmlns="http://www.w3.org/2000/svg"
-          
+
 //         >
 //           <circle cx="14.666" cy="14.6665" r="8" stroke="#343A40" />
 //           <path
@@ -44,14 +44,18 @@
 //   );
 // };
 // export default InputSearch
+//=========================================================================
 
-"use client"
 
-import React, { useState, useEffect } from 'react';
+
+"use client";
+
+import React, { useState, useEffect } from "react";
 
 const InputSearch: React.FC = () => {
   const [showInput, setShowInput] = useState<boolean>(false);
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [searchValue, setSearchValue] = useState<string>("");
 
   useEffect(() => {
     // Check screen size on mount and resize
@@ -60,53 +64,100 @@ const InputSearch: React.FC = () => {
     };
 
     handleResize(); // Check initial screen size
-    window.addEventListener('resize', handleResize);
-    
+    window.addEventListener("resize", handleResize);
+
     // Cleanup function to remove event listener
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // Your search input change logic here
-  };
+    const value = event.target.value;
 
+    // Check if input value exceeds 30 characters
+    if (value.length <= 30) {
+      // Update searchValue state
+      setSearchValue(value);
+    }
+  };
+  
   const handleIconClick = () => {
     setShowInput(!showInput);
   };
 
   return (
-    <div className="relative">
+    <div className="relative mt-[2%]">
       {isSmallScreen ? (
         <button
           type="button"
-          className="absolute top-0 right-0 flex items-center justify-center w-12 h-full bg-white rounded-md"
+          className="absolute px-1 right-0 flex items-center justify-center w-12 h-full  bg-white rounded-md"
           onClick={handleIconClick}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-400"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
           >
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
+          {/* <div> 
+           <svg
+            width="32"
+            height="30"
+            viewBox="0 0 32 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="14.666"
+              cy="13.86"
+              rx="8"
+              ry="7.15789"
+              stroke="#343A40"
+            />
+            <path
+              d="M14.666 10.2812C14.1407 10.2812 13.6206 10.3738 13.1353 10.5537C12.65 10.7335 12.209 10.9972 11.8376 11.3295C11.4662 11.6618 11.1715 12.0564 10.9705 12.4906C10.7695 12.9248 10.666 13.3902 10.666 13.8602"
+              stroke="#343A40"
+              stroke-linecap="round"
+            />
+            <path
+              d="M26.666 24.5965L22.666 21.0176"
+              stroke="#343A40"
+              stroke-linecap="round"
+            />
+           </svg>
+          </div> */}
+          
         </button>
       ) : (
-        <input
+
+        <label className="relative block w-[100%]">
+      <span className="absolute inset-y-0 left-0 flex items-center pl-1">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="14.666" cy="14.6665" r="8" stroke="#343A40" />
+          <path
+            d="M14.666 10.6665C14.1407 10.6665 13.6206 10.77 13.1353 10.971C12.65 11.172 12.209 11.4666 11.8376 11.8381C11.4662 12.2095 11.1715 12.6505 10.9705 13.1358C10.7695 13.6211 10.666 14.1412 10.666 14.6665"
+            stroke="#343A40"
+            stroke-linecap="round"
+          />
+          <path
+            d="M26.666 26.6665L22.666 22.6665"
+            stroke="#343A40"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+      <input
           type="text"
           placeholder="Search..."
-          className="w-full px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
+          className="w-full px-8 py-2 text-D9D9D9 rounded-md border border-zinc-500 shadow-sm focus:outline-none focus:ring focus:ring-blue-100"
           onChange={handleInputChange}
-        />
+          value={searchValue}
+      />
+    </label>
       )}
+      
     </div>
   );
 };
 
 export default InputSearch;
-
