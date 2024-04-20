@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import "../../../globals.css"
+import "../../../globals.css";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -46,7 +47,7 @@ const page = () => {
                   className="border w-[92%] h-[50px] p-4 rounded-xl"
                   placeholder="Enter your new password"
                 />
-                    <label
+                <label
                   htmlFor="new password"
                   className="flex justify-start font-medium text-gray-500 opacity-[80%] ml-2"
                 >
@@ -60,9 +61,11 @@ const page = () => {
               </div>
             </div>
             <div className="flex justify-center items-center pt-8">
-              <button className="px-12 py-3  bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%]">
-                Change password
-              </button>
+              <Link href={"/"}>
+                <button className="px-12 py-3  bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%]">
+                  Change password
+                </button>
+              </Link>
             </div>
           </div>
         </div>

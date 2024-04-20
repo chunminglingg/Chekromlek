@@ -1,3 +1,3 @@
-import ShowModal from "./ShowModal";
+import ShowModal from "./ShowedModal";
 
 export {ShowModal}

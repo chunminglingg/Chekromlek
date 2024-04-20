@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-interface ViewPostProps {
+interface UserCardProps {
   profile: string;
   username: string;
   hour: number;
@@ -10,7 +10,7 @@ interface ViewPostProps {
   postImage?: string | undefined;
 }
 
-const ViewPost: React.FC<ViewPostProps> = ({
+const UserCard: React.FC<UserCardProps> = ({
   profile,
   username,
   hour,
@@ -33,9 +33,9 @@ const ViewPost: React.FC<ViewPostProps> = ({
     // Maximum length for the caption before truncation
     const maxCaptionLength = 100;
   return (
-    <div className=" w-[430px] max-sm:w-[315px] h-auto min-md:mt-[10%] p-2 ">
-      <div>
-        <div className="flex items-center justify-between gap-5">
+    <div className="">
+      <div className="mt-[2%] w-[420px] max-sm:w-[310px] h-auto border rounded-md max-sm:mt-[15%] min-md:mt-[10%] max-sm:border-none ">
+        <div className="flex items-center justify-between ">
            {/* Profile */}
           <div className="flex items-center">
             <Image
@@ -50,14 +50,11 @@ const ViewPost: React.FC<ViewPostProps> = ({
               <p className="font-medium text-[16px] text-gray-900">
                 {username}
               </p>
-              <p className="text-sm text-gray-500">{hour} hour ago</p>
+              <p className="text-sm text-gray-500">update {hour} hour ago</p>
             </div>
           </div>
         </div>
         {/* Caption */}
-        {/* <div className="mt-2">
-          <p className="font-bold text-gray-900">{caption}</p>
-        </div> */}
           <div className="card-content flex flex-col gap-2 items-center justify-center">
             {/* Render truncated caption with "See more" link */}
             <p className="text-[14px] text-[#6C757D]">
@@ -74,49 +71,35 @@ const ViewPost: React.FC<ViewPostProps> = ({
               )}
             </p>
             {postImage && (
-              <div className="w-[320px] h-[320px] m-1 ">
+              <div className="w-[320px] h-[320px] rounded-md">
                 <Image
                   alt="content post"
                   src={postImage}
                   width={320}
                   height={320}
-                  className="rounded-md "
                 />
               </div>
             )}
       </div>
       {/* Footer */}
       <div className=" mb-[2%] w-full border-t rounded-sm border-gray-500"></div>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center justify-center">
-          <div className="hover:opacity-30">
-          <Image
-            src={"/imgs/mypf.jpg"}
-            width={42}
-            height={42}
-            alt="profile"
-            className="rounded-full "
-          />
-          </div>
-          <input
-            type="text"
-            placeholder=" Answer question... "
-            className="w-full px-2 py-2 text-[#6C757D] rounded-md focus:outline-none"
-          />
-        </div>
-
-        <Image
-          alt="post"
-          src={"/icons/sent.svg"}
-          width={38}
-          height={38}
-          className="-translate-x-3"
-        />
+      <div className="flex items-start justify-start gap-2">
+      <div className="inline-flex items-start justify-start">
+        <button className=" w-[95px] h-[45px] items-center justify-center border-2 rounded-md border-green-300 hover:border-green-500">
+        <span className="text-green-600 text-[14px] ">Very Useful</span>
+        </button>
       </div>
-      <div className=" mt-[2%] w-full border-b rounded-sm border-gray-500"></div>
+      <div>
+      <button className=" w-[95px] h-[45px] items-center justify-center border-2 rounded-md border-red-200 hover:border-red-500">
+        <span className="text-red-400 text-[14px] ">Very Useful</span>
+        </button>
+      </div>
+      </div>
+      </div>
 
-    </div>
+   
     </div>
   );
 };
-export { ViewPost };
+export { UserCard };
+

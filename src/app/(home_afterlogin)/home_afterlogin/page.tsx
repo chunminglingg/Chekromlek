@@ -1,3 +1,4 @@
+import Modal from "@/components/Molecules/Post/Modal/Modal";
 import { PostCard } from "@/components/Organisms";
 import React from "react";
 
@@ -5,7 +6,11 @@ const page = () => {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <div className="mt-[25%] flex items-center"></div>
+        
+        <div className="mt-[8%] flex items-center"></div>
+        <div>
+        <Modal/>
+        </div>
         <PostCard
           profile="/card-svg/avatar.svg"
           hour={2}

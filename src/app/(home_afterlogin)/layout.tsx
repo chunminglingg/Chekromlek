@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import Link from "next/link";
-import Logo from "@/components/Atoms/Logo/Logo";
-import SideLeft from "@/components/Molecules/SideLeft/SideLeft";
 import Nav from "@/components/Organisms/navbar/Nav";
 import { Sidebar } from "@/components/Organisms/sidebar/Sidebar";
-import SideRight from "@/components/Molecules/SideRight/SideRight";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +25,6 @@ export default function RootLayout({
           {children}
         </div>
         <Sidebar />
-      
       </body>
     </html>
   );

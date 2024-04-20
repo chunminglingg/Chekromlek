@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
 import React from "react";
-import  ShowModal  from "@/components/Molecules/Post/Modal/ShowModal";
-import Post from "../Post";
+import  ShowModal  from "@/components/Molecules/Post/Modal/ShowedModal";
+import Post from "@/components/Molecules/Post/Post";
 
 const Modal = () => {
   const [modalState, setModalState] = useState<boolean>(false);
   return (
-    <div  >
+    <div >
       <div
-      className=" w-[300px] mt-[10%] min-sm:mt-[15%] min-md:ms-[10%]"
+      className=" w-[150px] max-sm:w-auto -translate-x-60 max-sm:translate-x-full max-sm:h-auto max-md:-translate-x-44 max-md:w-auto min-md:h-auto md:mt-[15%]"
       onClick={() => setModalState(true)}>
       <Post />
       </div>

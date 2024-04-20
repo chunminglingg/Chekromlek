@@ -3,8 +3,9 @@ import React from "react";
 export default function Post() {
   return (
     <div>
+      {/* <click to Post> */}
       {/* svg profile */}
-      <div className=" md:w-[447px] flex items-center justify-between border rounded-lg border-slate-100 transition-transform -translate-x-full sm:translate-x-1/2 max-sm:mt-[10%] md:h-[70px] sm:w-[253px] sm:mt-[10%] sm:h-[35px] hover:bg-slate-100">
+      <div className=" md:w-[413px] flex items-center justify-between border rounded-lg border-slate-100 transition-transform -translate-x-full sm:translate-x-1/2 max-sm:mt-[10%] md:h-[70px]  sm:mt-[10%] sm:h-[50px] hover:bg-slate-100">
        <div className="flex items-center justify-between gap-2 ms-[2%]">
         <svg
           width="42"
