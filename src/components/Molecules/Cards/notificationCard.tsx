@@ -26,7 +26,7 @@ const NotificationCard = ({
       <div
         className={`cursor-pointer container${
           isSelected ? "bg-[#FFFF]" : "bg-[#F4F4F4]"
-        } border-gray-200 p-4 shadow-sm w-[450px] relative flex rounded-xl`}
+        } border-gray-200 p-4 shadow-sm md:w-[450px] relative flex rounded-xl`}
         onClick={() => {
           setIsSelected(!isSelected);
           if (onSelectCard) {
@@ -34,7 +34,7 @@ const NotificationCard = ({
           }
         }}
       >
-        <div className="flex">
+        <div className="flex ">
           <div className="mr-3">
             <Image
               src={image}
@@ -58,7 +58,7 @@ const NotificationCard = ({
                 <div
                   className={`${
                     isSelected ? "hidden" : ""
-                  } bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full absolute top-5 left-0'`}
+                  } bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full absolute top-5 left-1'`}
                 >
                   {badge}
                 </div>
