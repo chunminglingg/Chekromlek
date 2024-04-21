@@ -48,7 +48,7 @@ const pages = () => {
                 placeholder="Password"
               />
               <p className="text-end text-[#434A4F]">
-                Forgot{" "}
+                Forgot your{" "}
                 <Link
                   href={"/login/forgot"}
                   className="text-[#9747FF] hover:text-[#d1b6f6]"
@@ -58,7 +58,7 @@ const pages = () => {
                 ?
               </p>
               <div className="flex flex-col items-center mt-4">
-                <Link href={"/"}>
+                <Link href={"/afterlogin"}>
                   <button
                     type="submit"
                     className="w-[200px] h-[60px] bg-[#7B2CBF] hover:text-[#d1b6f6] text-white rounded-lg hover:opacity-[80%]"
@@ -73,7 +73,7 @@ const pages = () => {
                 _______________________{" "}
               </p>
               <p className="text-center text-[#434A4F] ">
-                Don't have account ?{" "}
+               {" Don't have account ?"} {" "}
                 <Link
                   href={"/signup"}
                   className="text-[#9747FF] hover:text-[#d1b6f6]"
@@ -82,7 +82,7 @@ const pages = () => {
                 </Link>
               </p>
               <div className="flex flex-col items-center justify-center mt-2 gap-2">
-                <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-3xl hover:opacity-[80%]">
+                <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-lg hover:opacity-[80%]">
                   <Image
                     src={"socialMedia/facebook.svg"}
                     alt="facebook"
@@ -93,7 +93,7 @@ const pages = () => {
                     Continues with Facebook
                   </div>
                 </button>
-                <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-3xl hover:opacity-[80%]">
+                <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-lg hover:opacity-[80%]">
                   <Image
                     src={"socialMedia/google.svg"}
                     alt="google"
