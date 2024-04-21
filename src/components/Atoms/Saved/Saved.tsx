@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Saved = () => {
   const [Save, setSave] = useState(false);
@@ -12,7 +13,7 @@ const Saved = () => {
     <>
       <button className='flex flex-row gap-1 justify-center' onClick={handleClick}>
         <p className='font-normal text-[12px]'>{Save ? 'Unsaved' : 'Save'}</p>
-        <img src={Save ? "/card-svg/save/AfterSave.svg" : "/card-svg/save/saved.svg"} alt={Save ? 'after-save' : 'save'} width={16} height={16} />
+        <Image src={Save ? "/card-svg/save/AfterSave.svg" : "/card-svg/save/saved.svg"} alt={Save ? 'after-save' : 'save'} width={16} height={16} />
       </button>
     </>
   );

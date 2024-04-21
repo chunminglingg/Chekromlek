@@ -36,7 +36,8 @@ function navbar() {
             />
           </Link>
         </div>
-        {/* icon */}
+
+       
         <div className="block md:hidden mt-4 absolute right-5">
           <Burger/>
         </div>
