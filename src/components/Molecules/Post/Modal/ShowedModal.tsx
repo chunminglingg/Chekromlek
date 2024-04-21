@@ -6,8 +6,8 @@ interface ModalProps {
 const ShowModal: React.FC<ModalProps> = (props) => {
   return (
     <div className="">
-      <div className="fixed inset-3 flex justify-center items-center z-10 max-sm:w-auto  max-sm:translate-x-42 ">
-        <div className=" bg-white w-[550px] h-[450px] max-sm:w-[350px]  text-black items-center justify-center border rounded-md border-gray-400">
+      <div className="fixed inset-3 flex justify-center items-center z-10 max-sm:w-auto  max-sm:translate-x-42 max-sm:mt-[9%] ">
+        <div className=" bg-white w-[550px] h-[450px] max-sm:w-[350px] max-sm:h-[420px] text-black items-center justify-center border rounded-md border-gray-400">
           <button
             onClick={() => props.setModalState(false)}
           >

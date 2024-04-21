@@ -5,7 +5,7 @@ export default function Post() {
     <div>
       {/* <click to Post> */}
       {/* svg profile */}
-      <div className=" md:w-[413px] flex items-center justify-between border rounded-lg border-slate-100 transition-transform -translate-x-full sm:translate-x-1/2 max-sm:mt-[10%] md:h-[70px]  sm:mt-[10%] sm:h-[50px] hover:bg-slate-100">
+      <div className=" md:w-[418px] flex items-center justify-between border rounded-lg border-fuchsia-200 transition-transform -translate-x-full sm:translate-x-1/2 max-sm:mt-[10%] md:h-[70px]  sm:mt-[10%] sm:h-[50px] hover:bg-slate-100">
        <div className="flex items-center justify-between gap-2 ms-[2%]">
         <svg
           width="42"

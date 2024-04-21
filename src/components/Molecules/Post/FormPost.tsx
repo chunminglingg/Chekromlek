@@ -7,12 +7,13 @@ import UploadButton from "../UploadImage/UploadButton";
 
 function FormPost() {
   return (
-    <div className=" mt-[10%] max-md:w-[250px] items-center justify-center ">
+    <div className=" mt-[10%] max-md:w-[410px] items-center justify-center max-sm:w-[320px] ">
       <div className=" h-auto border-b-2 border-neutral-200 ">
         <p className="text-md">Create a Post</p>
       </div>
       <div>
-        <select className="w-[180px] h-[30px] mt-[3%] max-sm:w-[120px] font-extralight border rounded-md border-gray-700 focus:outline-none focus:ring focus:ring-gray-700">
+        <select className="w-[180px] h-[30px] mt-[3%] max-sm:w-[120px] text-gray-500 text-[13px] border rounded-md border-gray-700 focus:outline-none focus:ring focus:ring-gray-700">
+        <option value="Choose" >Choose Categories....</option>
           <option value="Mathematic">Mathematic</option>
           <option value="Physic">Physic</option>
           <option value="Khmer_Writing">Khmer Writing</option>
@@ -48,7 +49,7 @@ function FormPost() {
           <textarea
             id="message"
             rows={5}
-            className="p-2 w-full md:w-[453px] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300  dark:text-white focus:outline-none"
+            className="p-2 w-full md:w-[453px] text-sm text-black bg-gray-50 rounded-lg border border-gray-300  dark:text-white focus:outline-none"
             placeholder="typing something..."
           ></textarea>
         </div>
