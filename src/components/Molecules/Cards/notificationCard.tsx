@@ -59,7 +59,7 @@ const NotificationCard = ({
                 <div
                   className={`${
                     isSelected ? "hidden" : ""
-                  } bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full absolute top-5 left-1'`}
+                  } bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full absolute top-2 md:top-0 left-1'`}
                 >
                   {badge}
                 </div>
