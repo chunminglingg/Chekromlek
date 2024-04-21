@@ -18,11 +18,11 @@ const NotificationPage = () => {
   return (
     <>
       <div className="flex flex-col ">
-        <div className="text-white-700 text-[26px] flex mt-20">
+        <div className="text-gray-600 text-[26px] flex mt-20 pl-2 pt-2 font-semibold">
           Notification
         </div>
         <div className="flex mt-5">
-          <div className=" text-gray-500 text-base font-semibold">New</div>
+          <div className=" text-gray-600 text-base font-semibold pl-4">New</div>
         </div>
         <div className="flex flex-col gap-1">
           <NotificationCard
@@ -51,7 +51,9 @@ const NotificationPage = () => {
           />
         </div>
         <div className="flex mt-5">
-          <div className="text-gray-500 text-base font-semibold">Earlier</div>
+          <div className="text-gray-600 text-base font-semibold pl-4">
+            Earlier
+          </div>
         </div>
         <div className="flex flex-col gap-1">
           <NotificationCard

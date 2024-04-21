@@ -24,8 +24,8 @@ const NotificationCard = ({
   return (
     <>
       <div
-        className={`cursor-pointer container${
-          isSelected ? "bg-[#FFFF]" : "bg-[#F4F4F4]"
+        className={`cursor-pointer container justify-center items-center${
+          isSelected ? "bg-[#FFFF]" : "bg-[#b3a8a8]"
         } border-gray-200 p-4 shadow-sm md:w-[450px] relative flex rounded-xl`}
         onClick={() => {
           setIsSelected(!isSelected);
@@ -39,9 +39,9 @@ const NotificationCard = ({
             <Image
               src={image}
               alt="user-profile"
-              width={50}
-              height={50}
-              className="w-[90px] h-[55px] rounded-full object-cover"
+              width={70}
+              height={70}
+              className=" rounded-full object-cover"
             />
           </div>
           <div className="flex justify-center items-center mr-9 relative">
