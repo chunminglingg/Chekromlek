@@ -1,3 +1,3 @@
-import Viewpost from "./ViewPost"
+import ViewPost from './ViewPost'
 
-export { Viewpost}
+export { ViewPost}
