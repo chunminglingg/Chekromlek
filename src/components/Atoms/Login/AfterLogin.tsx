@@ -8,7 +8,7 @@ import Link from "next/link";
 const AfteLogin = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isOpen);
-  const nameUser = "Manith Kh"
+  const nameUser = "Kimlang Tieng"
 
   return (
     <>
@@ -26,7 +26,7 @@ const AfteLogin = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M18 15L12 9L6 15" stroke="#33363F" stroke-width="2" />
+              <path d="M18 15L12 9L6 15" stroke="#33363F" strokeWidth="2" />
             </svg>
           ) : (
             <svg
@@ -36,7 +36,7 @@ const AfteLogin = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M6 9L12 15L18 9" stroke="#33363F" stroke-width="2" />
+              <path d="M6 9L12 15L18 9" stroke="#33363F" strokeWidth="2" />
             </svg>
           )}
         </button>
