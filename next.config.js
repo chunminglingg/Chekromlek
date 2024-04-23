@@ -1,4 +1,4 @@
-// next.config.js
+
 const path = require("path");
 
 module.exports = {
@@ -21,13 +21,5 @@ module.exports = {
 
     return config;
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true,
-      },
-    ];
-  },
+
 };

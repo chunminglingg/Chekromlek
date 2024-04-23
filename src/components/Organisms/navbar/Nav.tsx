@@ -17,6 +17,7 @@ function navbar() {
             <InputSearch />
           </div>
         </div>
+        
         <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
           <button className="text-white bg-[#7B2CBF] flex flex-row gap-2 px-5 py-2 rounded-lg">
             <Link href={"/login"}>Login</Link>
@@ -36,7 +37,8 @@ function navbar() {
             />
           </Link>
         </div>
-        {/* icon */}
+
+       
         <div className="block md:hidden mt-4 absolute right-5">
           <Burger/>
         </div>

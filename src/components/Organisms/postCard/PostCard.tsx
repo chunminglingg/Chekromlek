@@ -4,6 +4,7 @@ import Image from "next/image";
 import Like from "@/components/Atoms/Like/Like";
 import Comment from "@/components/Atoms/Comment/Comment";
 import Saved from "@/components/Atoms/Saved/Saved";
+import Link from "next/link";
 
 interface postCardProps {
   profile: string;
@@ -109,7 +110,8 @@ const PostCard: React.FC<postCardProps> = ({
                 </div>
               </div>
               <div className="right-item ">
-                <button className="px-4 py-3 bg-[#6A23A7] text-white rounded-lg text-[12px] hover:opacity-[80%] flex flex-row gap-1">
+               <Link href={"/viewpost"}>
+               <button className="px-4 py-3 bg-[#6A23A7] text-white rounded-lg text-[12px] hover:opacity-[80%] flex flex-row gap-1">
                   Answer
                   <Image
                     alt="post"
@@ -118,6 +120,7 @@ const PostCard: React.FC<postCardProps> = ({
                     height={19}
                   />
                 </button>
+               </Link>
               </div>
             </div>
           </div>

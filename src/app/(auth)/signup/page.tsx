@@ -70,11 +70,11 @@ const pages = () => {
                   </Link>
                 </p>
                 <div className="flex flex-col items-center justify-center mt-2 gap-2">
-                    <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-3xl hover:opacity-[80%]">
+                    <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-lg hover:opacity-[80%]">
                       <Image src={"socialMedia/facebook.svg"} alt="facebook" width={32} height={32} />
                       <div className="text-[#434A4F]">Continues with Facebook</div>
                     </button>
-                    <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-3xl hover:opacity-[80%]">
+                    <button className="flex flex-row items-center gap-2 w-[370px] h-[64px] border justify-center rounded-lg hover:opacity-[80%]">
                       <Image src={"socialMedia/google.svg"} alt="google" width={32} height={32} />
                       <div className="text-[#434A4F]">Continues with Facebook</div>
                     </button>

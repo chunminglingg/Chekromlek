@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { NotificationCard } from "./notificationCard";
 import { NotificationUserProps } from "@/app/(notification)/notification/page";
