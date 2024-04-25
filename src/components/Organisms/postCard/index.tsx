@@ -1,2 +1,3 @@
 import PostCard from "./PostCard";
-export {PostCard};
+import PostCardList from "./PostCardList";
+export {PostCard , PostCardList} ;
