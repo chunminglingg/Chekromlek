@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Like = () => {
@@ -16,7 +17,7 @@ const Like = () => {
       onClick={handleClick}
     >
       <p className={`text-[16px] max-sm:text-xs font-normal`}>{isLiked ? '13' : '12'}</p>
-      <img
+      <Image
         src={isLiked ? "/card-svg/like/Afterlike.svg" : "/card-svg/like/like.svg"}
         alt={isLiked ? 'after-like' : 'like'}
         width={16}
