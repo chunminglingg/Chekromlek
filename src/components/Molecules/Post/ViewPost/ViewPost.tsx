@@ -91,7 +91,7 @@ const ViewPost: React.FC<ViewPostProps> = ({
           <div className="flex items-center justify-center">
             <div className="hover:opacity-30">
               <Image
-                src={"/imgs/mypf.jpg"}
+                src={"/card-svg/avatar.svg"}
                 width={42}
                 height={42}
                 alt="profile"

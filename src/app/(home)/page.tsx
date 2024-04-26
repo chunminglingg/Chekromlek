@@ -15,9 +15,9 @@ const page = () => {
         />
         <PostCard
           profile="/card-svg/avatar.svg"
-          hour={2}
+          hour={3}
           username="Kimlang Tieng"
-          caption="Why is it  s it that although China is already the second largest  in the world..already the second largest  in the worldalready the second largest  in the worldthat although China is already the second largest  in the world"
+          caption="Why is it that although China is already the second largest  in the world..already the second largest  in the worldalready the second largest  in the worldthat although China is already the second largest  in the world"
         />
       </div>
     </>
