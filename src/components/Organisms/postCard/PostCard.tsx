@@ -80,7 +80,7 @@ const PostCard: React.FC<postCardProps> = ({
           </div>
           <div className="card-content flex flex-col gap-2 items-center">
             {/* Render truncated caption with "See more" link */}
-            <p className="title font-semibold text-[#343A40] text-2xl hover:underline">{title}</p>
+            <p className="title font-semibold text-[#343A40] text-2xl hover:underline max-sm:text-xl max-sm:font-medium">{title}</p>
             <p className="text-[14px] text-[#343A40] font-light">
               {isCaptionTruncated
                 ? truncateCaption(caption || "", maxCaptionLength)
