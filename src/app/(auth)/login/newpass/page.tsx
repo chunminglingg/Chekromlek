@@ -24,7 +24,7 @@ const page = () => {
           <div className="absolute top-2 right-4">
             <Image src={"/login/logo.svg"} alt="logo" width={120} height={60} />
           </div>
-          <div className="w-[500px] md:w-[80%] h-[55%] relative rounded-3xl shadow-md">
+          <div className="w-[500px]  md:w-[80%] max-md:w-[120px] max-sm:w-[95%]  relative rounded-3xl shadow-md">
             <div className="flex flex-col gap-5 h-[93px] justify-center items-center">
               <p className="font-medium text-[20px] ml-5 text-[#343A40] ">
                 Change your password
@@ -62,7 +62,7 @@ const page = () => {
             </div>
             <div className="flex justify-center items-center pt-8">
               <Link href={"/"}>
-                <button className="px-12 py-3  bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%]">
+                <button className="px-12 py-3  bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%] mb-4 ">
                   Change password
                 </button>
               </Link>
