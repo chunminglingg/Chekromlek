@@ -17,17 +17,7 @@ function navbar() {
             <InputSearch />
           </div>
         </div>
-        
         <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
-          <button className="text-white bg-[#7B2CBF] flex flex-row gap-2 px-5 py-2 rounded-lg">
-            <Link href={"/login"}>Login</Link>
-            <Image
-              src={"/icons/login.svg"}
-              alt="loginIcon"
-              width={24}
-              height={24}
-            />
-          </button>
           <Link href={"#"}>
             <Image
               src={"/icons/lan.svg"}
@@ -36,11 +26,18 @@ function navbar() {
               height={34}
             />
           </Link>
+          <div className="flex flex-row gap-2 items-center">
+            <button className="text-[#7B2CBF] text-lg border border-[#7B2CBF] hover:text-white hover:bg-[#7B2CBF] flex flex-row gap-2 px-8 py-2 rounded-lg">
+              <Link href={"/login"}>Login</Link>
+            </button>
+            <button className="text-white text-lg border border-[#7B2CBF] bg-[#7B2CBF] flex flex-row gap-2 px-6 py-2 rounded-lg">
+              <Link href={"/signup"}>Register</Link>    
+            </button>
+          </div>
         </div>
 
-       
         <div className="block md:hidden mt-4 absolute right-5">
-          <Burger/>
+          <Burger />
         </div>
       </div>
     </nav>

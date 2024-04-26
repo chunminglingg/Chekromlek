@@ -4,6 +4,7 @@ import "../globals.css";
 import Nav from "@/components/Organisms/navbar/Nav";
 import { Sidebar } from "@/components/Organisms/sidebar/Sidebar";
 import { RightSide } from "@/components/Organisms";
+import CardContext from "@/contexts/PostCardContext/PostCardContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Nav />
         <div className="flex justify-center items-center h-full ">
-          <div className="h-[200px]"></div>
-          {children}
-          <div className="absolute right-14 top-32 hidden lg:block">
+          <CardContext>{children}</CardContext>
+          <div className="absolute right-0 top-32 hidden lg:block">
             <RightSide/>
           </div>
         </div>
