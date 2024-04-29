@@ -9,11 +9,13 @@ interface CardContextProp {
 interface ContextProps {
   CardInfo: PostCardType[];
   setCardInfo: React.Dispatch<React.SetStateAction<PostCardType[]>>;
+  toggleFavorite: (id: string) => void;
 }
 
 export const MyCardContext = createContext<ContextProps>({
   CardInfo: [],
   setCardInfo: () => {},
+  toggleFavorite: () => {},
 });
 
 const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) => {
@@ -40,10 +42,25 @@ const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) =
     },
   ]);
 
+   function toggleFavorite(id: string) {
+     const updatedCard = CardInfo.map((card) => {
+      if (card.id == id) {
+        return {
+          ...card,
+          isFavorite: !card.isFavorite,
+        };
+      }
+      return card;
+    });
+    setCardInfo(updatedCard);
+  }
+
+
   // State Value
   const ContextValue = {
     CardInfo,
     setCardInfo,
+    toggleFavorite,
   };
 
   return (
