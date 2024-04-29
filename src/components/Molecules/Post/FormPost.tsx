@@ -80,8 +80,8 @@ function FormPost() {
           </div>
           {/* Display uploaded image if available */}
           {uploadedImageUrl && (
-            <div className="flex items-center justify-center mt-2">
-              <Image src={uploadedImageUrl} alt="Uploaded Image" width={270} height={225} />
+            <div className=" w-[170] h-[125] flex items-center justify-center mt-2">
+              <Image src={uploadedImageUrl} alt="Uploaded Image" width={170} height={125} />
             </div>
           )}
         </div>

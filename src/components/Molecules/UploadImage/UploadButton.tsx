@@ -96,7 +96,7 @@ function UploadButton({ onImageUpload }: { onImageUpload: (imageUrl: string) => 
     <div className= 'w-[270px] h-[190px] flex items-center justify-center bg-gray-200 rounded-md '>
       <label htmlFor="fileUpload" className="flex-row items-center gap-2 cursor-pointer">
         {previewImage ? (
-          <Image src={previewImage} alt="Preview" width={270} height={225} className=' relative items-center justify-center rounded-md ' />
+          <Image src={previewImage} alt="Preview" width={ 150} height={150} className=' ms-[20%] h-[150px] relative items-center justify-center rounded-md ' />
         ) : (
           <Image src="/img.svg" alt="img" width={24} height={24} className='ms-[38%] flex items-center justify-center rounded-md ' />
         )}
