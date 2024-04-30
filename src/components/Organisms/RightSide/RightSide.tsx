@@ -26,7 +26,7 @@ const RightSide = () => {
           <button className="w-[200px] text-[13px] h-[40px] rounded-xl border text-[#535c63] hover:opacity-[76%]">Biology</button>
           </Link>
         </div>
-        <p className="text-[14px] text-[#6C757D] font-light opacity-[60%]">Weshare, Inc. © 2024. All rights reserved.</p>
+        <p className="text-[14px] text-[#6C757D] font-light opacity-[60%]">Chekromlek, Inc. © 2024. All rights reserved.</p>
       </div>
     </>
   );

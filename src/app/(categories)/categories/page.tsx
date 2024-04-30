@@ -68,7 +68,7 @@ const page = () => {
               Education
             </div>
 
-            <div className="grid grid-cols-1 justify-start gap-4">
+            <div className="grid grid-cols-1 justify-start">
               {displayedCategories.map((category) => (
                 <Link href={category.href} key={category.title}>
                   <ButtonCategories
