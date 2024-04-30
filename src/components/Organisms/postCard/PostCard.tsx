@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Like from "@/components/Atoms/Like/Like";
@@ -23,7 +23,7 @@ const PostCard: React.FC<postCardProps> = ({
   postImage,
 }) => {
   // Calculate the height dynamically based on whether postImage is provided
-  const cardHeight = postImage ? 'h-[100%]' : 'h-[100%]';
+  const cardHeight = postImage ? "h-[100%]" : "h-[100%]";
 
   // State to track whether the caption is truncated
   const [isCaptionTruncated, setIsCaptionTruncated] = useState(true);
@@ -35,7 +35,7 @@ const PostCard: React.FC<postCardProps> = ({
 
   // Function to truncate the caption if it exceeds a certain number of characters
   const truncateCaption = (text: string, maxLength: number) => {
-    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
   // Maximum length for the caption before truncation
@@ -44,13 +44,20 @@ const PostCard: React.FC<postCardProps> = ({
 
 
   return (
+
     <div className="flex flex-col gap-2 justify-center items-center shadow-md border rounded-md">
       <div className={`card w-[663px] max-sm:w-[350px]  ${cardHeight} flex justify-center items-center rounded-md `}>
         <div className="card-items w-[630px] max-sm:w-[320px] flex flex-col gap-2 justify-between">
           <div className="card-header flex flex-row justify-between mt-4">
             <div className="profile flex flex-row gap-2">
               <div className="avatar w-[42px] h-[42px] rounded-full ">
-                <Image alt="avatar" src={profile} height={42} width={42} className="rounded-full"/>
+                <Image
+                  alt="avatar"
+                  src={profile}
+                  height={42}
+                  width={42}
+                  className="rounded-full"
+                />
               </div>
               <div className="Name&Time ">
                 <h3 className="font-medium text-[16px] text-[#343A40]">
@@ -64,10 +71,10 @@ const PostCard: React.FC<postCardProps> = ({
             <button className="options">
               <Image
                 alt="option"
-                src={'card-svg/option.svg'}
+                src={"card-svg/option.svg"}
                 width={20}
                 height={20}
-                className="hover:shadow-xl"
+                className="hover:shadow-2xl hover:border rounded-md "
               />
             </button>
           </div>
@@ -76,14 +83,14 @@ const PostCard: React.FC<postCardProps> = ({
             <p className="title font-semibold text-[#343A40] text-2xl hover:underline max-sm:text-xl max-sm:font-medium">{title}</p>
             <p className="text-[14px] text-[#343A40] font-light">
               {isCaptionTruncated
-                ? truncateCaption(caption || '', maxCaptionLength)
+                ? truncateCaption(caption || "", maxCaptionLength)
                 : caption}
               {caption && caption.length > maxCaptionLength && (
                 <button
                   className="text-[14px] text-[#4b81ed] font-medium underline cursor-pointer ml-1"
                   onClick={toggleCaptionTruncation}
                 >
-                  {isCaptionTruncated ? ' See more' : 'See less'}
+                  {isCaptionTruncated ? " See more" : "See less"}
                 </button>
               )}
             </p>
