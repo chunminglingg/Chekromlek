@@ -7,6 +7,7 @@ import SideLeft from "@/components/Molecules/SideLeft/SideLeft";
 import Nav from "@/components/Organisms/navbar/Nav";
 import { Sidebar } from "@/components/Organisms/sidebar/Sidebar";
 import NavAfter from "@/components/Organisms/navbar/NavAfter";
+import CardContext from "@/contexts/PostCardContext/PostCardContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
