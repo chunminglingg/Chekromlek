@@ -40,6 +40,15 @@ const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) =
       caption: 'To become a successful full-stack developer, youll need to master a diverse range of skills. Here a breakdown of the essential areas to focus on:', // Assuming you want this to be consistent
       isFavorite: false
     },
+    {
+      id: '3',
+      profile: '/card-svg/avatar.svg',
+      hour: 2,
+      username: 'Khiev Navin',
+      title: "What skills should I learn to become a full-stack developer?",
+      caption: 'To become a successful full-stack developer, youll need to master a diverse range of skills. Here a breakdown of the essential areas to focus on:', // Assuming you want this to be consistent
+      isFavorite: false
+    },
   ]);
 
    function toggleFavorite(id: string) {

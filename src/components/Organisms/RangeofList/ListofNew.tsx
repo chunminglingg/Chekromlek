@@ -14,7 +14,7 @@ const ListofNew = () => {
         <ButtonIcon icon="/svg/Top.svg">top</ButtonIcon>
       </Link>
       <Link href="/options" passHref className=" hover:bg-slate-100 rounded-md w-full h-full flex items-center justify-center" >
-        <ButtonIcon icon="/svg/option.svg"></ButtonIcon>
+        <ButtonIcon icon="card-svg/option.svg"></ButtonIcon>
       </Link>
     </div>
   );
