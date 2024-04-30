@@ -2,6 +2,7 @@
 
 import { NotificationCard } from "@/components/Molecules/Cards/notificationCard";
 import React, { useState } from "react";
+
 export interface NotificationUserProps {
   id: string;
   userName: string;
@@ -10,14 +11,21 @@ export interface NotificationUserProps {
 }
 
 const NotificationPage = () => {
-  const [selectedCard, setSelectedCard] = useState<string | null>(null);
-  const handleSelectCard = (id: string) => {
-    setSelectedCard(id);
-  };
+  // const [selectedCard, setSelectedCard] = useState<string | null>(null);
+  // const handleSelectCard = (id: string) => {
+  //   setSelectedCard(id);
+  // };
 
   return (
     <>
-      <div className="flex flex-col ">
+    <div  className="flex flex-col " >
+    <div className="text-gray-600 text-[26px] flex mt-20 pl-2 pt-2 font-semibold">
+          Notification
+        </div>
+    
+    </div>
+
+      {/* <div className="flex flex-col ">
         <div className="text-gray-600 text-[26px] flex mt-20 pl-2 pt-2 font-semibold">
           Notification
         </div>
@@ -81,7 +89,8 @@ const NotificationPage = () => {
             onSelectCard={handleSelectCard}
           />
         </div>
-      </div>
+      </div> */}
+
     </>
   );
 };

@@ -30,5 +30,4 @@ const NotificationCardList = ({
     </div>
   );
 };
-
 export default NotificationCardList;

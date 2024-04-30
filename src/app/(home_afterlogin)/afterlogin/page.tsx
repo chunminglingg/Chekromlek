@@ -12,9 +12,9 @@ const page = () => {
         <div>
         <Modal/>
         </div>
-        <div className="items-start justify-start border-blue-500 rounded-lg">
+        {/* <div className="items-start justify-start border-blue-500 rounded-lg">
           <ListofNew/>
-        </div>
+        </div> */}
         <PostCard
           profile="/card-svg/avatar.svg"
           hour={2}
