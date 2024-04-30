@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -6,7 +6,6 @@ interface NotificationCardProps {
   id: string;
   image: string;
   userName: string;
-  description: string;
   selectCard?: string | null;
   onSelectCard?: (id: string) => void;
   badge?: string;
@@ -16,41 +15,41 @@ const NotificationCard = ({
   id,
   image,
   userName,
-  description,
   onSelectCard,
   badge = "new",
 }: NotificationCardProps) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
+  
+  const handleClick = () => {
+    if (!isSelected) {
+      setIsSelected(true);
+    }
+  };
 
   return (
     <>
       <div
         className={`cursor-pointer container justify-center items-center${
           isSelected ? "bg-[#FFFF]" : "bg-[#b3a8a8]"
-        } border-gray-200 p-4 shadow-sm md:w-[450px] relative flex rounded-xl`}
-        onClick={() => {
-          setIsSelected(!isSelected);
-          if (onSelectCard) {
-            onSelectCard(id);
-          }
-        }}
+        } border-gray-200 p-4 shadow-sm md:w-[450px] max-sm:w-[340px] relative flex rounded-xl`}
+        onClick={handleClick}
       >
-        <div className="flex ">
+        <div className="flex gap-2">
           <div className="mr-3">
             <Image
               src={image}
               alt="user-profile"
-              width={70}
-              height={70}
+              width={60}
+              height={60}
               className=" rounded-full object-cover"
             />
           </div>
           <div className="flex justify-center items-center mr-9 relative">
             <div className="line-clamp-1 md:line-clamp-2 overflow-hidden">
               <p>
-                <span className="font-semibold text-black">{userName},</span>
-                <span className="text-gray-500 text-sm font-normal animation-marquee-10s linear infinite">
-                  {description}...
+                <span className="font-semibold text-[#33363F] text-base max-sm:text-sm">{userName}</span>
+                <span className="text-[#6C757D] text-base font-normal animation-marquee-10s linear infinite max-sm:text-sm">
+                 , has answer to question you posted!
                 </span>
               </p>
             </div>

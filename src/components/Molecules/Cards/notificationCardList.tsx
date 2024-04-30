@@ -1,30 +1,29 @@
-"use client"
+"use client";
 import React from "react";
 import { NotificationCard } from "./notificationCard";
-import { NotificationUserProps } from "@/app/(notification)/notification/page";
 
-interface CardListProps {
-  items: NotificationUserProps[];
-  selectCard: string;
-  onSelectCard: React.Dispatch<React.SetStateAction<string>>;
-}
+const items = [
+  {
+    id: "1",
+    image: "/card-svg/avatar.svg",
+    userName: "Kimlang Tieng",
+  },
+  {
+    id: "2",
+    image: "/card-svg/avatar.svg",
+    userName: "Tan Hanshangpho",
+  },
+];
 
-const NotificationCardList = ({
-  items,
-  selectCard,
-  onSelectCard,
-}: CardListProps) => {
+const NotificationCardList = () => {
   return (
     <div>
-      {items.map((item, index) => (
+      {items.map((item) => (
         <NotificationCard
-          id={item.id}
-          userName={item.userName}
-          description={item.description}
-          key={item.id || index}
+          key={item.id}
           image={item.image}
-          onSelectCard={onSelectCard}
-          selectCard={selectCard}
+          userName={item.userName}
+          id={item.id}
         />
       ))}
     </div>
