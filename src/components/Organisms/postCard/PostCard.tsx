@@ -44,10 +44,9 @@ const PostCard: React.FC<postCardProps> = ({
 
 
   return (
-
-    <div className="flex flex-col gap-2 justify-center items-center shadow-md border rounded-md">
-      <div className={`card w-[663px] max-sm:w-[350px]  ${cardHeight} flex justify-center items-center rounded-md `}>
-        <div className="card-items w-[630px] max-sm:w-[320px] flex flex-col gap-2 justify-between">
+    <div className="flex flex-col gap-2 justify-center items-center shadow-md border rounded-md w-[663px] max-sm:w-[350px]">
+      <div className={`card w-[663px] max-sm:w-[320px] ${cardHeight} flex justify-center items-center rounded-md `}>
+        <div className="card-items w-[630px] max-sm:w-[300px]flex flex-col gap-2 justify-between">
           <div className="card-header flex flex-row justify-between mt-4">
             <div className="profile flex flex-row gap-2">
               <div className="avatar w-[42px] h-[42px] rounded-full ">
@@ -80,7 +79,7 @@ const PostCard: React.FC<postCardProps> = ({
           </div>
           <div className="card-content flex flex-col gap-2 items-center">
             {/* Render truncated caption with "See more" link */}
-            <p className="title font-semibold text-[#343A40] text-2xl hover:underline max-sm:text-xl max-sm:font-medium">{title}</p>
+            <p className="title font-semibold text-[#343A40] text-2xl hover:underline max-sm:text-xl max-sm:font-medium pt-2">{title}</p>
             <p className="text-[14px] text-[#343A40] font-light">
               {isCaptionTruncated
                 ? truncateCaption(caption || "", maxCaptionLength)

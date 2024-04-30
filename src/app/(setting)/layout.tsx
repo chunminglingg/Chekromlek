@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavAfter />
-        <div className="flex justify-center items-center h-full">
+        <div className="flex justify-center items-center h-full ">
           <div className="h-[300px]"></div>
           {children}
         </div>

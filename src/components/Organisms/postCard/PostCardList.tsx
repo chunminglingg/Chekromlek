@@ -5,13 +5,12 @@ import { MyCardContext } from '@/contexts/PostCardContext/PostCardContext'; // A
 
 const PostCardList: React.FC = () => {
   const { CardInfo } = useContext(MyCardContext);
-
+ 
 
   return (
     <div className='space-y-4'>
       {CardInfo.map((info) => (
         <PostCard
-
           key={info.id}
           hour={info.hour}
           caption={info.caption}

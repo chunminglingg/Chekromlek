@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 export default function page() {
   return (
-    <div className='w-[40%] max-sm:w-[70%] max-md:w-[60%] min-md:w-[60%] max-lg:w-[60%] flex-row items-center justify-center  mt-[8%] max-md:mt-[12%] max-sm:mt-[18%] max-lg:mt-[10%] ' >
+    <div className='w-[40%] max-sm:w-[70%] max-md:w-[60%] min-md:w-[60%] max-lg:w-[60%] flex-row items-center justify-center  mt-[8%] max-md:mt-[12%] max-sm:mt-[28%] max-lg:mt-[10%] ' >
       {/* User Setting */}
       <div className='flex items-end justify-start border-b-2 border-gray-300  gap-2 '>
         <Image src={'/icons/setting.svg'} alt='setting_icon' width={30} height={30} />

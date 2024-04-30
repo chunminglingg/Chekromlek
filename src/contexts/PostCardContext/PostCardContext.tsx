@@ -9,11 +9,13 @@ interface CardContextProp {
 interface ContextProps {
   CardInfo: PostCardType[];
   setCardInfo: React.Dispatch<React.SetStateAction<PostCardType[]>>;
+  toggleFavorite: (id: string) => void;
 }
 
 export const MyCardContext = createContext<ContextProps>({
   CardInfo: [],
   setCardInfo: () => {},
+  toggleFavorite: () => {},
 });
 
 const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) => {
@@ -38,12 +40,36 @@ const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) =
       caption: 'To become a successful full-stack developer, youll need to master a diverse range of skills. Here a breakdown of the essential areas to focus on:', // Assuming you want this to be consistent
       isFavorite: false
     },
+    {
+      id: '3',
+      profile: '/card-svg/avatar.svg',
+      hour: 2,
+      username: 'Khiev Navin',
+      title: "What skills should I learn to become a full-stack developer?",
+      caption: 'To become a successful full-stack developer, youll need to master a diverse range of skills. Here a breakdown of the essential areas to focus on:', // Assuming you want this to be consistent
+      isFavorite: false
+    },
   ]);
+
+   function toggleFavorite(id: string) {
+     const updatedCard = CardInfo.map((card) => {
+      if (card.id == id) {
+        return {
+          ...card,
+          isFavorite: !card.isFavorite,
+        };
+      }
+      return card;
+    });
+    setCardInfo(updatedCard);
+  }
+
 
   // State Value
   const ContextValue = {
     CardInfo,
     setCardInfo,
+    toggleFavorite,
   };
 
   return (
