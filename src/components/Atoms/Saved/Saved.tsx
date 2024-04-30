@@ -1,24 +1,29 @@
-"use client"
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 
 const Saved = () => {
-  const [Save, setSave] = useState(false);
+  const [isSaved, setIsSaved] = useState(false); // Use a descriptive variable name
 
   const handleClick = () => {
-    setSave(!Save);
+    setIsSaved(!isSaved); 
+    
   };
+
   return (
     <button
       className={`flex flex-row gap-2 justify-center items-center ${
-        Save ? 'text-[#3A7CA5]' : 'text-[#343A40]'
+        isSaved ? 'text-[#3A7CA5]' : 'text-[#343A40]'
       }`}
       onClick={handleClick}
+    
+      
     >
-      <p className={`text-[16px] max-sm:text-sm font-normal`}>{Save ? 'Unsaved' : 'Save'}</p>
+      <p className={`text-[16px] max-sm:text-sm font-normal`}>
+        {isSaved ? 'Unsaved' : 'Save'}
+      </p>
       <Image
-        src={Save ? "/card-svg/save/AfterSave.svg" : "/card-svg/save/saved.svg"}
-        alt={Save ? 'after-save' : 'save'}
+        src={isSaved ? "/card-svg/save/AfterSave.svg" : "/card-svg/save/saved.svg"}
+        alt={isSaved ? 'after-save' : 'save'}
         width={18}
         height={18}
       />
