@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const page = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [showMore, setShowMore] = useState(false);
   const categories = [
     {
