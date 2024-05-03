@@ -49,7 +49,7 @@ const AfteLogin = () => {
                 </Link>
               </li>
               <li>
-                <Link href={"#"}>
+                <Link href={"/setting/"}>
                   <button className="hover:font-medium">Setting</button>
                 </Link>
               </li>

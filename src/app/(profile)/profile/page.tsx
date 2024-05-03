@@ -1,4 +1,5 @@
 import { PostCard } from "@/components/Organisms";
+import { EditProfile } from "@/components/Organisms/editProfile/EditPro";
 import Image from "next/image";
 import React from "react";
 
@@ -34,9 +35,10 @@ const page = () => {
             </div>
           </div>
           <div className="header-right pb-28 pr-8">
-            <button className="px-2 py-2 rounded-2xl text-[#343A40] border border-gray-300">
+            <EditProfile/>
+            {/* <button className="px-2 py-2 rounded-2xl text-[#343A40] border border-gray-300 hover:bg-gray-300">
               Edit profile
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="button-card w-[450px] h-[70px] rounded-tl-2xl rounded-tr-2xl bg-gray-200 flex flex-row justify-evenly items-center mt-4 ">

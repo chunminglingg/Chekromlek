@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Atoms/Button/Button";
 import UploadButton from "../UploadImage/UploadButton";
-import { Textarea } from "@nextui-org/input";
-
 function FormPost() {
   const [title, setTitle] = useState(""); // State to store the title input
   const [description, setDescription] = useState(""); // State to store the description input
