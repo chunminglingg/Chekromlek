@@ -1,9 +1,55 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import "../../globals.css";
+import loginValidations from "@/schema/Auth@Validation/Login";
+
+interface dataTypes {
+  email: string;
+  password: string;
+}
 
 const pages = () => {
+  const [data, setData] = useState<dataTypes>({
+    email: "",
+    password: "", 
+  });
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+    setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
+  };
+
+  async function handleSubmit(e: any) {
+    e.preventDefault();
+    console.log("Submitting data:", data);
+    try {
+      await loginValidations.validate(data, { abortEarly: false });
+      // Validation successful, proceed with form submission logic (e.g., send data to server)
+
+      // Redirect to /afterlogin route
+      window.location.href = "/afterlogin"; // This is a simple way to redirect
+      console.log("Form data is valid!");
+      setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
+    } catch (error: any | unknown) {
+      const fieldErrors: { [key: string]: string } = {};
+      // Error From Yup
+      error.inner.forEach((err: any) => {
+        fieldErrors[err.path] = err.message;
+      });
+      console.log("Field Error", fieldErrors);
+      setErrors((prev) => ({
+        ...prev,
+        ...fieldErrors,
+      }));
+      return;
+    }
+  }
+
   return (
     <>
       <div className="flex justify-between h-screen w-screen">
@@ -36,18 +82,32 @@ const pages = () => {
               <form
                 action="login"
                 className="mt-5 flex flex-col gap-3 items-center"
+                onSubmit={handleSubmit}
               >
-                <input
-                  type="email"
-                  className="w-[400px]  max-sm:w-[290px] h-[60px] border border-[#cccccd] rounded-lg  pl-4"
-                  placeholder="yourname@example.com"
-                />
-                <input
-                  type="password"
-                  className="w-[400px] h-[60px] max-sm:w-[290px] border border-[#cccccd] rounded-lg  pl-4"
-                  placeholder="Password"
-                />
-
+                <div className="flex flex-col">
+                  <input
+                    type="email"
+                    className="w-[400px]  max-sm:w-[290px] h-[60px] border border-[#cccccd] rounded-lg  pl-4"
+                    placeholder="yourname@example.com"
+                    name="email"
+                    onChange={handleChange}
+                  />
+                  {errors.email && errors.password  && (
+                    <p className="text-[#EB5757] ">{errors.email}</p>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <input
+                    type="password"
+                    className="w-[400px] h-[60px] max-sm:w-[290px] border border-[#cccccd] rounded-lg  pl-4"
+                    placeholder="Password"
+                    name="password"
+                    onChange={handleChange}
+                  />
+                  {errors.password && errors.email && (
+                    <p className="text-[#EB5757] ">{errors.password}</p>
+                  )}
+                </div>
                 <div className="flex justify-end  w-full">
                   <Link href={"/login/forgot"}>
                     <p className="text-[#343A40] ">
@@ -62,14 +122,12 @@ const pages = () => {
                 </div>
 
                 <div className="flex flex-col items-center mt-4">
-                  <Link href={"/afterlogin"}>
-                    <button
-                      type="submit"
-                      className="w-[400px] h-[60px] bg-[#7B2CBF]  max-sm:w-[290px] hover:text-[#d1b6f6] text-white rounded-lg hover:opacity-[80%]"
-                    >
-                      Login
-                    </button>
-                  </Link>
+                  <button
+                    type="submit"
+                    className="w-[400px] h-[60px] bg-[#7B2CBF]  max-sm:w-[290px] hover:text-[#d1b6f6] text-white rounded-lg hover:opacity-[80%]"
+                  >
+                    Login
+                  </button>
                 </div>
 
                 <p className="text-center text-gray-400">
