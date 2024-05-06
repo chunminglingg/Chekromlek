@@ -3,9 +3,8 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Nav from "@/components/Organisms/navbar/Nav";
 import { Sidebar } from "@/components/Organisms/sidebar/Sidebar";
-import { RightSide } from "@/components/Organisms";
 import CardContext from "@/contexts/PostCardContext/PostCardContext";
-
+import SideRight from "@/components/Molecules/SideRight/SideRight";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export default function RootLayout({
         <div className="flex justify-center items-center h-full ">
           <CardContext>{children}</CardContext>
           <div className="absolute right-0 top-32 hidden lg:block">
-            <RightSide/>
+            <SideRight></SideRight>
           </div>
         </div>
         <Sidebar />

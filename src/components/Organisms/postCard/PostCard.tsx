@@ -22,6 +22,7 @@ const PostCard: React.FC<postCardProps> = ({
   title,
   postImage,
 }) => {
+  
   // Calculate the height dynamically based on whether postImage is provided
   const cardHeight = postImage ? "h-[100%]" : "h-[100%]";
 

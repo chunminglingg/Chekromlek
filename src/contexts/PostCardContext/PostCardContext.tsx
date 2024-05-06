@@ -19,6 +19,7 @@ export const MyCardContext = createContext<ContextProps>({
 });
 
 const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) => {
+  
   const [CardInfo, setCardInfo] = useState<PostCardType[]>([
     {
       id: '1',
@@ -50,7 +51,15 @@ const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) =
       isFavorite: false
     },
   ]);
-
+  // const handleAddCard = (CardInfo) => {
+  //   const newId = Math.random().toString(36).substring(2, 8); // return 1f74e
+  //   const newCard = { ...CardInfo,id:newId};
+  //   setCardInfo((prevUsers) => {
+  //     const newAllCards=[...prevUsers, newCard];
+  //     return newAllCards;
+  //   });
+    
+  // };
    function toggleFavorite(id: string) {
      const updatedCard = CardInfo.map((card) => {
       if (card.id == id) {
@@ -70,6 +79,7 @@ const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) =
     CardInfo,
     setCardInfo,
     toggleFavorite,
+    // handleAddCard
   };
 
   return (

@@ -1,16 +1,18 @@
 "use client"
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Atoms/Button/Button";
 import UploadButton from "../UploadImage/UploadButton";
 import { Textarea } from "@nextui-org/input";
+import { MyCardContext } from "@/contexts/PostCardContext/PostCardContext";
 
 function FormPost() {
   const [title, setTitle] = useState(""); // State to store the title input
   const [description, setDescription] = useState(""); // State to store the description input
   const [uploadedImageUrl, setUploadedImageUrl] = useState(""); // State to store the URL of the uploaded image
-  const [showAttachment, setShowAttachment] = useState(true); // State to control the visibility of the attachment
-
+  const [showAttachment, setShowAttachment] = useState(true);
+  // const {handleAddCard}=useContext(MyCardContext)
+   // State to control the visibility of the attachment
   const handlePostClick = () => {
     // Handle post submission here
     console.log("Title:", title);
@@ -22,7 +24,7 @@ function FormPost() {
     setDescription("");
     setUploadedImageUrl("");
     setShowAttachment(true); // Reset the attachment visibility
-  
+    // handleAddCard(title)
   };
 
   const handleAttachmentUpload = (imageUrl:string) => {

@@ -4,7 +4,7 @@ import React from "react";
 const SideRight = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 mt-2 max-sm:hidden max-md:hidden ">
+      <div className="flex flex-col gap-4 mt-2 max-sm:hidden max-md:hidden mr-12 ">
         <main>
           <h2 className="text-[#ACACAC] mb-[5%]">Suggest for you</h2>
           <div className="flex flex-col gap-2 ">

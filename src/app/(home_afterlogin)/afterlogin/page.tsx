@@ -13,7 +13,8 @@ const page = () => {
         </div> */}
         
         <div className="pt-[15%] max-sm:pt-[30%]">
-          <CreatePostDialog />
+          {/* <CreatePostDialog /> */}
+          <Modal></Modal>
           <PostCardList />
         </div>
       </div>
