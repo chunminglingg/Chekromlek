@@ -1,6 +1,7 @@
 import { Burger } from "@/components/Atoms";
 import Logo from "@/components/Atoms/Logo/Logo";
 import InputSearch from "@/components/Molecules/Search/SearchInput";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

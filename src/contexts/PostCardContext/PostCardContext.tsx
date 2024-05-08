@@ -54,8 +54,8 @@ const CardContext: React.FC<CardContextProp> = ({ children }: CardContextProp) =
   // const handleAddCard = (CardInfo) => {
   //   const newId = Math.random().toString(36).substring(2, 8); // return 1f74e
   //   const newCard = { ...CardInfo,id:newId};
-  //   setCardInfo((prevUsers) => {
-  //     const newAllCards=[...prevUsers, newCard];
+  //   setCardInfo((prevCards) => {
+  //     const newAllCards=[...prevCards, newCard];
   //     return newAllCards;
   //   });
     

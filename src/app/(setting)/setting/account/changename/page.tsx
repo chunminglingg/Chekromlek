@@ -31,7 +31,7 @@ const page = () => {
               <h1>Change Name</h1>
             </div>
           </Link>
-          <hr className=" w-[370px] text-left ml-2 mt-1 lg:w-[460px] h-2px border-gray-300" />
+          <hr className=" w-[370px] text-left ml-2 mt-1 lg:w-[460px] h-2px md:w-[430px] border-gray-300" />
         </div>
         <div className="flex flex-col gap-3">
           <div className="flex flex-col lg:flex-row gap-2 lg:justify-center lg:items-center">
@@ -40,7 +40,7 @@ const page = () => {
               type="text"
               name=""
               id=""
-              className=" w-[280px] lg:w-[350px] h-[50px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
+              className=" w-[280px] lg:w-[350px] h-[50px] md:w-[330px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
               value={currentName}
               onChange={(e) => setCurrentName(e.target.value)}
             />
@@ -53,7 +53,7 @@ const page = () => {
               type="text"
               name=""
               id=""
-              className=" w-[280px] lg:w-[350px] h-[50px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
+              className=" w-[280px] lg:w-[350px] h-[50px] md:w-[330px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
               value={newName}
               onChange={(e) => setNewName(e.target.value)}
             />

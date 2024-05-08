@@ -1,7 +1,16 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const SearchInput = () => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+    // Here you can perform real-time search operations
+    console.log('Search term:', event.target.value);
+  };
+
   return (
     <>
       <div className="flex flex-row items-center border border-gray-300 rounded-md p-2">
@@ -16,6 +25,8 @@ const SearchInput = () => {
           type="text"
           placeholder="Search"
           className="outline-none ml-2 flex-grow"
+          value={searchTerm}
+          onChange={handleInputChange}
         />
       </div>
     </>

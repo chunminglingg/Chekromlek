@@ -1,6 +1,7 @@
 import React, { ReactNode, MouseEvent } from "react";
 
 interface ButtonProps {
+  type?: "button" | "submit" | "reset"; 
   children: ReactNode;
   className?: string;
   background?: " bg-slate-100"|"bg-violet-500" | "bg-slate-300";
