@@ -6,9 +6,9 @@ import React from "react";
 
 export default function Viewpost() {
   return (
-    <div className="max-sm:mt-[5%] min-md:mt-[15%] lg:mt-[7%]">
-      <div className=" w-[430px] max-sm:w-[315px] max-sm:mt-[18%] h-auto border rounded-md translate-x-1">
-       <div className="flex flex-col ">
+    <div className="max-sm:mt-[5%] md:mt-[12%] max-md:mt-[12%] lg:mt-[7%] min-lg:mt-[9%]">
+      <div className=" w-[430px] max-sm:w-[345px] max-sm:mt-[20%] min-sm:mt-[20%] h-auto border rounded-md translate-x-1 max-md:mt-[5%]">
+        <div className="flex flex-col ">
           <ViewPost
             profile="/card-svg/avatar.svg"
             hour={2}

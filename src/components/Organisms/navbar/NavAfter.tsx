@@ -1,5 +1,6 @@
 import { AfteLogin, Burger } from "@/components/Atoms";
 import Logo from "@/components/Atoms/Logo/Logo";
+import SearchInput from "@/components/Molecules/Search/SearchInput";
 import InputSearch from "@/components/Molecules/Search/SearchInput";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,12 +14,12 @@ function NavAfter() {
           <Link href={"/afterlogin"}>
             <Logo />
           </Link>
-          <div className="hidden lg:block ">
-            <InputSearch />
+          <div className=" max-sm:w-auto ">
+            <SearchInput />
           </div>
         </div>
         
-        <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
+      <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
           <AfteLogin/>
           <Link href={"#"}>
             <Image
@@ -31,7 +32,7 @@ function NavAfter() {
         </div>
 
        
-        <div className="block md:hidden mt-4 absolute right-5">
+        <div className="block md:hidden   mt-3 absolute right-5">
           <Burger/>
         </div>
       </div>

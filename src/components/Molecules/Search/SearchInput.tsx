@@ -4,18 +4,18 @@ import React from "react";
 const SearchInput = () => {
   return (
     <>
-      <div className="flex flex-row items-center border border-gray-300 rounded-md p-2">
+      <div className="flex flex-row items-center border border-gray-300 rounded-md p-2  max-sm:me-12 md:w-[290px]">
         <Image
-          alt=""
+          alt="cancel"
           src={"/icons/search.svg"}
-          width={24}
-          height={24}
-          className="hidden md:inline-block"
+          width={25}
+          height={25}
+          className="bg-none"
         />
         <input
           type="text"
           placeholder="Search"
-          className="outline-none ml-2 flex-grow"
+          className="outline-none flex-grow bg-none w-auto max-sm:w-[150px]"
         />
       </div>
     </>

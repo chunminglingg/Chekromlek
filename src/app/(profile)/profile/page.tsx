@@ -8,7 +8,7 @@ const page = () => {
     <>
       <div className="content flex flex-col justify-center items-center">
         <div className="h-[90px]"></div>
-        <div className="card-header w-[660px] h-[186px] shadow-md rounded-2xl flex justify-between items-center relative border">
+        <div className="card-header w-[680px] min-sm:w-[230px] max-sm:w-[510px] h-[186px] shadow-md rounded-2xl flex justify-between items-center relative border">
           <div className="header-left flex flex-row gap-4 pl-10">
             <div className="user-profile">
               <Image
@@ -19,7 +19,7 @@ const page = () => {
               />
             </div>
             <div className="user-infor flex flex-col">
-              <div className="user-name font-medium text-[30px] text-[#343A40]">
+              <div className="user-name font-medium text-[30px] text-[#343A40] max-sm:text-xl">
                 Kimlang Tieng
               </div>
               <div className="been-post text-[#6C757D] text-[15px] font-sans flex flex-row gap-10">
@@ -35,13 +35,13 @@ const page = () => {
             </div>
           </div>
           <div className="header-right pb-28 pr-8">
-            <EditProfile/>
+            <EditProfile />
             {/* <button className="px-2 py-2 rounded-2xl text-[#343A40] border border-gray-300 hover:bg-gray-300">
               Edit profile
             </button> */}
           </div>
         </div>
-        <div className="button-card w-[450px] h-[70px] rounded-tl-2xl rounded-tr-2xl bg-gray-200 flex flex-row justify-evenly items-center mt-4 ">
+        <div className="button-card w-[663px] max-sm:w-[350px] h-[70px]  rounded-tl-2xl rounded-tr-2xl border shadow-md flex flex-row justify-evenly items-center mt-4 ">
           <div className="left hover:opacity-[60%]">
             <button className="flex flex-row gap-1">
               <p>Post</p>
@@ -66,27 +66,26 @@ const page = () => {
             </button>
           </div>
         </div>
-        
-          {/* postCard */}
-          <div>
-            <div className="flex flex-col gap-2 mt-4">
-              <PostCard
-                profile="/socialMedia/imageContent.svg"
-                hour={2}
-                username="Kimlang Tieng"
-                caption="Why is it that although China is already the second largest  in the world."
-                postImage="/socialMedia/imageContent.svg"
-              />
-              <PostCard
-                profile="/card-svg/avatar.svg"
-                hour={2}
-                username="Kimlang Tieng"
-                caption="Why is it  s it that although China is already the second largest  in the world..already the second largest  in the worldalready the second largest  in the worldthat although China is already the second largest  in the world"
-              />
-            </div>
-          </div>
-      </div>
 
+        {/* postCard */}
+        <div>
+          <div className="flex flex-col gap-2 mt-4">
+            <PostCard
+              profile="/card-svg/avatar.svg"
+              hour={2}
+              username="Kimlang Tieng"
+              caption="Why is it that although China is already the second largest  in the world."
+              postImage="/socialMedia/imageContent.svg"
+            />
+            <PostCard
+              profile="/card-svg/avatar.svg"
+              hour={2}
+              username="Kimlang Tieng"
+              caption="Why is it  s it that although China is already the second largest  in the world..already the second largest  in the worldalready the second largest  in the worldthat although China is already the second largest  in the world"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

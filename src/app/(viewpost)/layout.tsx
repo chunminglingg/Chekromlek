@@ -29,7 +29,9 @@ export default function RootLayout({
           <div className="h-[200px]"></div>
           {children}
         </div>
+        <div className="">
         <Sidebar />
+        </div>
       
       </body>
     </html>

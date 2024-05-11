@@ -14,7 +14,7 @@ const HeaderPost = ({profile = "/card-svg/avatar.svg"} : {profile?: string}) => 
                 <p className='text-gray-500'>Create a post...</p>
             </div>
             <div>
-                <Image alt='createPost' src='/svg/create.svg' width={42} height={42} className='rounded-full object-cover p-0 m-0 opacity-60' />
+                <Image alt='createPost' src='/icons/post.svg' width={35} height={35} className='rounded-full object-cover p-0 m-0 opacity-60' />
             </div>
         </div>
     </>

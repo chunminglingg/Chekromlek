@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import BeforeLogin from "./BeforLogin";
 import handleLogin from "./BeforLogin";
 import Link from "next/link";
+import { SideLeft } from "@/components/Molecules";
 
 const AfteLogin = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ const AfteLogin = () => {
           )}
         </button>
         {isOpen && (
-          <div className="absolute mt-1 w-auto px-24 shadow-md rounded-md bg-white z-50 pl-2 right-0 ">
+          <div className="absolute mt-1 w-auto px-24 shadow-md rounded-md bg-white z-55 pl-2 right-0 ">
             <ul className="px-2 py-5 flex flex-col gap-4">
               <li>
                 <Link href={"/profile"}>
@@ -54,8 +55,18 @@ const AfteLogin = () => {
                 </Link>
               </li>
               <li>
-                <Link href={"/"}>
-                  <button className="text-red-400 hover:font-medium w-full h-full">Log Out</button>
+                <Link href={"/categories/"}>
+                  <button className="hover:font-medium">Categories</button>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/notification/"}>
+                  <button className="hover:font-medium">Notification</button>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/signup/"}>
+                  <button className="text-red-400 hover:font-medium items-start justify-start">Log Out</button>
                 </Link>
               </li>
             </ul>
