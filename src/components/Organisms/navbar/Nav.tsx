@@ -1,5 +1,6 @@
 import { Burger } from "@/components/Atoms";
 import Logo from "@/components/Atoms/Logo/Logo";
+import SearchInput from "@/components/Molecules/Search/SearchInput";
 import InputSearch from "@/components/Molecules/Search/SearchInput";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,7 @@ function navbar() {
             <Logo />
           </Link>
           <div className="hidden lg:block ">
-            <InputSearch />
+            <SearchInput />
           </div>
         </div>
         <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">

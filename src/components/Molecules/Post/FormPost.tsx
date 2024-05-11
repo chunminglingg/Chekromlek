@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Atoms/Button/Button";
 import UploadButton from "../UploadImage/UploadButton";
-import { Textarea } from "@nextui-org/input";
-
 function FormPost() {
   const [title, setTitle] = useState(""); // State to store the title input
   const [description, setDescription] = useState(""); // State to store the description input
@@ -31,7 +29,7 @@ function FormPost() {
   };
 
   return (
-    <div className="mt-[1%] max-md:w-[410px] items-center justify-center max-sm:w-[320px]">
+    <div className="mt-[1%] max-md:w-[410px] items-center justify-center max-sm:w-[330px]">
       <div className="h-auto border-b-2 border-neutral-200">
         <p className="text-md">Create a Post</p>
       </div>
@@ -80,7 +78,7 @@ function FormPost() {
           </div>
           {/* Display uploaded image if available */}
           {uploadedImageUrl && (
-            <div className=" w-[170] h-[125] flex items-center justify-center mt-2">
+            <div className="w-[170] h-[125] flex items-center justify-center">
               <Image src={uploadedImageUrl} alt="Uploaded Image" width={170} height={125} />
             </div>
           )}
