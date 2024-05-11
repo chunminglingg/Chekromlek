@@ -9,7 +9,6 @@ const Biology = () => {
         title="Biology"
         description="share your experiences here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useState } from "react";
 import { Button } from "@/components/Atoms/Button/Button";
 import { Dispatch, SetStateAction } from "react";
@@ -6,14 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 type SetSave = Dispatch<SetStateAction<boolean>>; // Assuming 'save' is of type boolean
 
-const page = () => {
-  const [currentName, setCurrentName] = useState("");
+const Page = () => {
   const [newName, setNewName] = useState("");
-
+  const [password,setPassword]=useState("");
   const handleSave = () => {
     // Perform actions with currentName and newName
-    console.log("Current Name:", currentName);
     console.log("New Name:", newName);
+    console.log("Password",password)
   };
 
   return (
@@ -36,26 +35,33 @@ const page = () => {
         <div className="flex flex-col gap-3">
           <div className="flex flex-col lg:flex-row gap-2 lg:justify-center lg:items-center">
             <label htmlFor="" className="ml-14 text-sm lg:ml-5">Current Name:</label>
-            <input
-              type="text"
-              name=""
-              id=""
-              className=" w-[280px] lg:w-[350px] h-[50px] md:w-[330px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
-              value={currentName}
-              onChange={(e) => setCurrentName(e.target.value)}
-            />
+            <div className=" w-[280px] lg:w-[350px] h-[50px] md:w-[330px] ml-14 lg:ml-0 border rounded-lg shadow-lg px-4 flex items-center">
+            </div>
           </div>
           <div className="flex flex-col lg:flex-row gap-2 lg:justify-center lg:items-center">
             <label htmlFor="" className="ml-14 text-sm lg:ml-10">
               New Name:
             </label>
-            <input
-              type="text"
+            <textarea
               name=""
               id=""
-              className=" w-[280px] lg:w-[350px] h-[50px] md:w-[330px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
+              // placeholder="Input your Name"
+              className=" w-[280px] lg:w-[350px] h-[50px] p-3 text-sm md:w-[330px] ml-14 lg:ml-0 border rounded-lg shadow-lg"
               value={newName}
               onChange={(e) => setNewName(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col lg:flex-row gap-2 lg:justify-center lg:items-center">
+            <label htmlFor="" className="ml-14 text-sm lg:ml-12">
+              Password:
+            </label>
+            <textarea
+              name=""
+              id=""
+              // placeholder="Input your password"
+              className=" w-[280px] lg:w-[350px] h-[50px] md:w-[330px] text-sm p-3 ml-14 lg:ml-0 border rounded-lg shadow-lg"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
         </div>
@@ -72,4 +78,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

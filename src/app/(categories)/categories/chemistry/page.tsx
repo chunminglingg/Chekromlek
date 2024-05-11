@@ -10,7 +10,6 @@ const Chemistry = () => {
         title="Chemistry"
         description="Communicate with chemistry lovers here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
     </div>
   )

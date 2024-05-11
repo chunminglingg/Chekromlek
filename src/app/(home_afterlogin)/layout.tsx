@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavAfter />
-        <div className="flex justify-center items-center h-full max-sm:w-full ">
+        <div className="flex justify-center items-center h-full max-sm:w-full md:w-full">
         <CardContext>{children}</CardContext>
           <div className="absolute right-0 top-32 hidden lg:block">
             <SideRight></SideRight>
