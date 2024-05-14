@@ -9,7 +9,6 @@ const Khmer = () => {
         title="Khmer"
         description="share your experiences here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
   )
 }

@@ -9,7 +9,6 @@ function Technology() {
      title="Technology"
      description="share your experiences here!"
    ></ButtonCategories>
-   <ListofNew></ListofNew>
     </div>
   )
 }

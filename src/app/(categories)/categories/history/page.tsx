@@ -10,7 +10,6 @@ const History = () => {
         title= "History"
         description="Get to know history together here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
     </div>
   )

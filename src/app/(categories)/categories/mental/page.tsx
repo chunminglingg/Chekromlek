@@ -9,7 +9,6 @@ const Mental = () => {
         title="Mental"
         description="share your experiences here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
   )
 }

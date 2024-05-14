@@ -10,7 +10,6 @@ const English = () => {
         title=  "English"
         description="share your experiences here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
     </div>
   )

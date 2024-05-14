@@ -9,7 +9,6 @@ function Physic() {
      title="Physical"
      description="share your experiences here!"
    ></ButtonCategories>
-   <ListofNew></ListofNew>
     </div>
   )
 }

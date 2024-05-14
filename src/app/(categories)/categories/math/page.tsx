@@ -9,7 +9,6 @@ const Math = () => {
         title="Mathemathic"
         description="share your experiences here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
     </div>
   )
 }

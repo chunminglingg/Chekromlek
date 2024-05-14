@@ -11,7 +11,6 @@ const GeneralKnowledge = () => {
         title="General Knowledge"
         description="share your experiences here!"
       ></ButtonCategories>
-      <ListofNew></ListofNew>
        </div>
     </>
   );
