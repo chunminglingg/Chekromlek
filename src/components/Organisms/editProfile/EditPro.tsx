@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { SelectSex } from "./SelectSex"; // Ensure correct path
-import UploadPro from './UploadPro';
+import UploadPro from './UploadPro'; // Ensure correct path
 
 export function EditProfile() {
   const [bio, setBio] = useState('');
@@ -33,8 +33,8 @@ export function EditProfile() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="outline-none border rounded-2xl  hover:opacity-[70%] p-2 h-[40px] items-center justify-center">
-          <p className="text-base max-sm:text-sm ">Edit Profile</p>
+        <button className="outline-none border rounded-2xl  hover:opacity-[70%] p-2 h-[40px] max-sm:w-[80px] items-center justify-center">
+          <p className="text-base max-sm:text-sm ">EditProfile</p>
         </button>
       </DialogTrigger>
       <DialogContent className="w-[525px] max-sm:w-[425px]">

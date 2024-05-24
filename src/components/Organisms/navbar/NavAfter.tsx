@@ -16,12 +16,12 @@ function NavAfter() {
           <Link href={"/afterlogin"}>
             <Logo />
           </Link>
-          <div className=" max-sm:w-auto ">
-          <SearchInput setSearch={setSearchQuery}/>
-          </div>
         </div>
-        
+        <div className=" mt-2   max-sm:me-[20%] max-md:me-[15%] max-sm:w-[160px]">
+          <SearchInput setSearch={setSearchQuery}/>
+        </div>
       <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
+       
           <AfteLogin/>
           <Link href={"#"}>
             <Image
@@ -32,7 +32,7 @@ function NavAfter() {
             />
           </Link>
         </div>
-        <div className="block md:hidden   mt-3 absolute right-5">
+        <div className="block md:hidden   mt-4 absolute right-5">
           <Burger/>
         </div>
       </div>

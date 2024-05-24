@@ -93,6 +93,7 @@ const CardContext: React.FC<CardContextProp> = ({
       hour: 2,
       username: "Sok Leng",
       title: "អ្វីទៅជា Silicon Valley?",
+      postImage: "/imgs/silicon.jpg",
       caption:
         "ជា​ឈ្មោះ​តំបន់​ដែល​ស្ថិត​នៅ​ផ្នែក​ខាង​ត្បូង​នៃ San Francisco Bay Area ចន្លោះ​ភាគ​ខាង​ជើង​នៃ​រដ្ឋ California សហរដ្ឋអាមេរិក។ ក្នុង​តំបន់​នេះ​ប្រមូល​ផ្ដុំ​ទៅ​ដោយ​ទីស្នាក់ការ​នៃ​ក្រុមហ៊ុន​បច្ចេកវិទ្យា​ធន់​ខ្ពស់ ដែល​មាន ៣៩ អាជីវកម្ម​ស្ថិត​ក្នុង​បញ្ជី Fortune ទាំង ១០០០ និង​មាន​បណ្ដា​ក្រុមហ៊ុន​ធ្វើ​ជំនួញ (Startup) រាប់​ពាន​កន្លែង។  ឈ្មោះ Silicon Valley បង្កើត​ឡើង​ដំបូង​បង្អស់​ដោយ​លោក Don Hoefler ដែល​គាត់​បាន​ប្រើ​ចុះ​ផ្សាយ​លើ​ចំណងជើង​នៃ​ទំព័រ​កាសែត​ប្រចាំ​សប្ដាហ៍​របស់ Eletronics News ដោយ​ដាក់​ថា Silicon Valley in the USA” ហើយ​បាន​ចុះ​ផ្សាយ​នា​ថ្ងៃ​ទី ១១ មករា​ឆ្នាំ ១៩៧១។​ បន្ទាប់​មក​ពាក្យ​នេះ បាន​រាលដាល​យ៉ាង​ខ្លាំង​នៅ​ដើម​សតវត្ស​ឆ្នាំ ១៩៨០ ដោយ​មាន​ការ​ចូលរួម​ពី​ក្រុមហ៊ុន IBM PC ទាក់ទង​នឹង​ប្រព័ន្ធ Hardware/Software នៃ​ការ​ចែកចាយ​ផលិតផល​លើ​ទីផ្សារ។ សូម្បី​តែ​ក្រុមហ៊ុន *Apple, Cisco, Google, HP, Intel និង Oracle* ជា​ដើម សុទ្ធ​សឹង​តែ​ឈរ​ជើង​ក្នុង​តំបន់ Silicon Valley។ ទន្ទឹម​នឹង​ការ​អភិវឌ្ឍ​ផ្នែក​បច្ចេកវិទ្យា​កម្រិត​ខ្ពស់​ចាប់​តាំង​ពី​សតវត្ស​ទី ២០ តំបន់​ពិសេស​មួយ​នេះ​បាន​ក្ដោបក្ដាប់​ទីផ្សារ​វិនិយោគ ១ ភាគ ៣ នៃ​ផ្ទៃ​ប្រទេស​អាមេរិក​ទាំង​មូល។​", // Assuming you want this to be consistent
       isFavorite: false,
@@ -127,6 +128,7 @@ const CardContext: React.FC<CardContextProp> = ({
     CardInfo,
     setCardInfo,
     toggleFavorite,
+    // handleAddCard
   };
 
   return (

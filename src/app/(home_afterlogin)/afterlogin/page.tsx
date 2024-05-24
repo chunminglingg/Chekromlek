@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 const page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [searchQuery, setSearchQuery] = useState<string>("");
+
   return (
     <>
       <div className="flex flex-col gap-2">
@@ -20,7 +20,7 @@ const page = () => {
           {/* <Modal/> */}
           <CreatePostDialog />
           {/* <SearchInput setSearch={setSearchQuery} /> */}
-          <PostCardList searchQuery={searchQuery} />
+          <PostCardList/>
         </div>
       </div>
     </>

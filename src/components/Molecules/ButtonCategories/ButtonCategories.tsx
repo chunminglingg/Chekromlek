@@ -14,7 +14,7 @@ const ButtonCategories: React.FC<ButtonCategoriesProps> = ({
   return (
     <div className=" mt-2 ">
       <div className=" w-[250] lg:m-auto flex">
-        <button className=" flex-1 w-[123px] lg:w-[450px] lg:h-[100px] m-2 h-[120px] px-[3px] flex items-center justify-between rounded-[16px] border border-gray-200 max-sm:justify-center hover:bg-gray-50">
+        <button className=" flex-1 w-[123px] lg:w-[450px] lg:h-[100px] m-2 h-[80px] px-[3px] flex items-center justify-between rounded-[16px] border border-gray-200 max-sm:justify-center hover:bg-gray-50">
           <div className="flex gap-4 max-sm:justify-center">
             <Image
               src={icon}

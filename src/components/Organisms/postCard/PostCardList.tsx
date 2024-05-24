@@ -10,7 +10,9 @@ const PostCardList= ({searchQuery = "" }) => {
     <div className='space-y-4'>
       {CardInfo.filter(info => {
         return searchQuery.trim() === ""?
-        info: info.username.toLowerCase().includes(searchQuery.toLowerCase()) || info.caption.toLowerCase().includes(searchQuery.toLowerCase()) || info.title.toLowerCase().includes(searchQuery.toLowerCase());
+        info: info.username.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        (info.caption!== undefined && info.caption.toLowerCase().includes(searchQuery.toLowerCase())) || 
+        (info.title!== undefined && info.title.toLowerCase().includes(searchQuery.toLowerCase()));
       }).map((info) => (
         <PostCard
           key={info.id}

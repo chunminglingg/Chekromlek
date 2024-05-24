@@ -11,7 +11,7 @@ const page = () => {
         <div className="hidden md:flex w-1/2 h-screen  max-md:bg-white lg:flex relative justify-center items-center shadow-md">
           <div className="hidden lg:block">
             <Image
-              src={"/login/pandel3.svg"}
+              src={"/login/forgetpwd.svg"}
               alt="panel3"
               width={530}
               height={300}
@@ -33,8 +33,8 @@ const page = () => {
               <Image
                 src={"/login/logo.svg"}
                 alt="logo"
-                width={120}
-                height={60}
+                width={150}
+                height={80}
               />
             </div>
             <div className=" h-[300px] h-max-auto relative rounded-3xl shadow-md ">
@@ -55,12 +55,12 @@ const page = () => {
                   placeholder="yourname@example.com"
                 />
               </div>
-              <div className="flex flex-row gap-3 absolute bottom-6 right-5">
-                <Link href={"/login"}>
+              <div className="flex items-start gap-3 absolute bottom-6 right-5">
+                {/* <Link href={"/login"}>
                   <button className="px-6 py-3 bg-slate-600 text-white rounded-xl hover:bg-slate-500">
                     Cancel
                   </button>
-                </Link>
+                </Link> */}
                 <Link href={"/login/newpass"}>
                   <button className="px-6 py-3 bg-[#7B2CBF] text-white rounded-xl hover:opacity-[90%]">
                     Search

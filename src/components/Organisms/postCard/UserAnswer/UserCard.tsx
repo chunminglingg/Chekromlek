@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Like from "@/components/Atoms/Like/Like";
 
 interface UserCardProps {
   profile: string;
@@ -33,8 +34,8 @@ const UserCard: React.FC<UserCardProps> = ({
   // Maximum length for the caption before truncation
   const maxCaptionLength = 100;
   return (
-    <div className="">
-      <div className="mt-[2%] w-[420px] max-sm:w-[310px] h-auto border rounded-md max-sm:mt-[5%] min-md:mt-[10%] max-sm:border-none ">
+    <div className="m-auto">
+      <div className="mt-[2%] w-[420px] max-sm:w-[310px] h-auto max-sm:mt-[5%] min-md:mt-[10%] max-sm:border-none ">
         <div className="flex items-center justify-between ">
           {/* Profile */}
           <div className="flex items-center">
@@ -46,16 +47,18 @@ const UserCard: React.FC<UserCardProps> = ({
               alt="profile"
             />
             {/* Detail */}
-            <div className="ml-2">
+            <div className="ml-2 flex flex-col gap-0">
               <p className="font-medium text-[16px] text-gray-900">
                 {username}
               </p>
-              <p className="text-sm text-gray-500">update {hour} hour ago</p>
+              <p className="text-[12px] text-gray-500">
+                update {hour} hour ago
+              </p>
             </div>
           </div>
         </div>
         {/* Caption */}
-        <div className="card-content flex flex-col gap-2 items-center justify-center">
+        <div className="card-content flex flex-col gap-2 items-center justify-center mt-1 ms-2">
           {/* Render truncated caption with "See more" link */}
           <p className="text-[14px] text-[#6C757D]">
             {isCaptionTruncated
@@ -82,17 +85,10 @@ const UserCard: React.FC<UserCardProps> = ({
           )}
         </div>
         {/* Footer */}
-        <div className=" mb-[2%] w-[98%] ms-1 border-t rounded-sm border-gray-300 "></div>
-        <div className="flex items-start justify-start gap-2 mb-1 ms-1">
-          <div className="inline-flex items-start justify-start">
-            <button className=" w-[95px] h-[45px] items-center justify-center border-2 rounded-md border-green-300 hover:border-green-500">
-              <span className="text-green-500 text-[14px]">Very Useful</span>
-            </button>
-          </div>
-          <div>
-            <button className=" w-[95px] h-[45px] items-center justify-center border-2 rounded-md border-red-200 hover:border-red-500">
-              <span className="text-red-400 text-[14px] ">Very Useful</span>
-            </button>
+        <div className=" mb-[2%] ms-1 border-t rounded-sm border-gray-300 "></div>
+        <div className="flex items-end justify-end gap-2 mb-1 ms-1">
+          <div className="like">
+            <Like />
           </div>
         </div>
       </div>

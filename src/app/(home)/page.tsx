@@ -5,9 +5,9 @@ const page = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center mt-[8%]  max-md:mt-[20%] ">
+      <div className="flex flex-col gap-2 items-center mt-[10%]  max-md:mt-[20%] ">
           <PostCardList/>
-          {/* {api()} */}
+         
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import "../../globals.css";
 import signupVali from "@/schema/Auth@login";
+import axios from "axios";
 
 interface dataTypes {
   username: string;
@@ -28,19 +29,19 @@ const Pages = () => {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    console.log("Submitting data:", data);
     try {
       await signupVali.validate(data, { abortEarly: false });
-      // Validation successful, proceed with form submission logic (e.g., send data to server)
-      // Redirect to /afterlogin route
+      await axios.post("http://localhost:3000/v1/auth/signup", data);
       window.location.href = "/afterlogin"; // This is a simple way to redirect
-      console.log("Form data is valid!");
-    } catch (error: any | unknown) {
+    } catch (error: any) {
       const fieldErrors: { [key: string]: string } = {};
+  
       // Error From Yup
-      error.inner.forEach((err: any) => {
-        fieldErrors[err.path] = err.message;
-      });
+      if (error.inner) {
+        error.inner.forEach((err: any) => {
+          fieldErrors[err.path] = err.message;
+        });
+      }
       console.log("Field Error", fieldErrors);
       setErrors((prev) => ({
         ...prev,
@@ -49,7 +50,7 @@ const Pages = () => {
       return;
     }
   }
-
+  
   return (
     <>
       <div className="flex justify-between h-screen w-screen">
@@ -73,8 +74,8 @@ const Pages = () => {
                 <Image
                   alt="panel"
                   src={"login/logo.svg"}
-                  width={120}
-                  height={60}
+                  width={150}
+                  height={80}
                 />
               </button>
             </Link>
@@ -83,6 +84,7 @@ const Pages = () => {
                 action="login"
                 className="mt-5 flex flex-col gap-3 items-center"
                 onSubmit={handleSubmit}
+                method="POST"
               >
                 <div className="flex flex-col">
                   <input
@@ -121,10 +123,12 @@ const Pages = () => {
                   )}
                 </div>
 
+
                 <div className="flex flex-col items-center mt-4">
                   <button
                     type="submit"
                     className="w-[400px] h-[60px] bg-[#7B2CBF]  max-sm:w-[290px] hover:text-[#d1b6f6] text-white rounded-lg hover:opacity-[80%]"
+                    formMethod="POST"
                   >
                     Register
                   </button>

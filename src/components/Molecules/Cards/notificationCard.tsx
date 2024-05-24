@@ -19,19 +19,23 @@ const NotificationCard = ({
   badge = "new",
 }: NotificationCardProps) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
-  
+
   const handleClick = () => {
     if (!isSelected) {
       setIsSelected(true);
+    }
+    if (onSelectCard) {
+      onSelectCard(id);
     }
   };
 
   return (
     <>
       <div
-        className={`cursor-pointer container justify-center items-center${
-          isSelected ? "bg-[#FFFF]" : "bg-[#b3a8a8]"
-        } border-gray-200 p-4 shadow-sm md:w-[450px] max-sm:w-[340px] relative flex rounded-xl`}
+        className={`cursor-pointer my-1 container justify-center items-center rounded-md hover:bg-[#e9ecef] 
+        ${
+          isSelected ? "bg-[#fdfdfd]" : "border shadow-md rounded-md"
+        } border-gray-200 p-4  md:w-[450px] max-sm:w-[340px] relative flex`}
         onClick={handleClick}
       >
         <div className="flex gap-2">
@@ -47,9 +51,11 @@ const NotificationCard = ({
           <div className="flex justify-center items-center mr-9 relative">
             <div className="line-clamp-1 md:line-clamp-2 overflow-hidden">
               <p>
-                <span className="font-semibold text-[#33363F] text-base max-sm:text-sm">{userName}</span>
+                <span className="font-semibold text-[#33363F] text-base max-sm:text-sm">
+                  {userName}
+                </span>
                 <span className="text-[#6C757D] text-base font-normal animation-marquee-10s linear infinite max-sm:text-sm">
-                 , has answer to question you posted!
+                  , has answer to question you posted!
                 </span>
               </p>
             </div>

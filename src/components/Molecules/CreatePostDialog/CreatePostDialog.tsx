@@ -12,11 +12,13 @@ import { SelectScrollable } from "../Selection/Selection";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { HeaderPost } from "../AfterPostHeader";
+import UploadButton from "@/components/Molecules/UploadImage/UploadButton"
 
 const CreatePostDialog = () => {
   // Define state variables to store input data
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [uploadedImageUrl, setUploadedImageUrl] = useState("");
 
   // Function to handle title input change
   const handleTitleChange = (e:any) => {
@@ -33,10 +35,16 @@ const CreatePostDialog = () => {
     // You can access title and description here to post the data
     console.log("Title:", title);
     console.log("Description:", description);
+    console.log("Uploaded Image URL:", uploadedImageUrl);
+
     // You can perform further actions like posting the data to a server
 
     setTitle("");
     setDescription("");
+  };
+  const handleAttachmentUpload = (imageUrl:string) => {
+    // Set the uploaded image URL
+    setUploadedImageUrl(imageUrl);
   };
 
   return (
@@ -67,9 +75,10 @@ const CreatePostDialog = () => {
                   value={description}
                   onChange={handleDescriptionChange}
                 />
-                <div className="w-full h-[100px] border rounded-md justify-center items-center grid  gap-1.5">
+                <div className="w-full h-[250px] border rounded-md justify-center items-center grid  gap-1.5">
                   {/* File input */}
-                  <Input type="file" />
+                  {/* <Input type="file" /> */}
+                  <UploadButton onImageUpload={handleAttachmentUpload} />
                 </div>
               </div>
               <div className="flex justify-end">

@@ -55,16 +55,6 @@ const AfteLogin = () => {
                 </Link>
               </li>
               <li>
-                <Link href={"/categories/"}>
-                  <button className="hover:font-medium">Categories</button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/notification/"}>
-                  <button className="hover:font-medium">Notification</button>
-                </Link>
-              </li>
-              <li>
                 <Link href={"/signup/"}>
                   <button className="text-red-400 hover:font-medium items-start justify-start">Log Out</button>
                 </Link>
