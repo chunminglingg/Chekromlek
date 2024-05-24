@@ -9,8 +9,8 @@ const Modal = () => {
   return (
     <div >
       <div
+      className=" w-[150px] max-sm:w-auto -translate-x-52 max-sm:translate-x-full  max-sm:h-auto max-md:-translate-x-52 max-md:w-auto min-md:h-auto md:mt-[13%]"
 
-      className=" w-[150px] max-sm:w-auto items-start -translate-x-72 max-sm:translate-x-full  max-sm:h-auto md:-translate-x-80 md:ms-[-5px] max-md:w-auto min-md:h-auto md:mt-[3%]"
       onClick={() => setModalState(true)}>
       <Post />
       </div>

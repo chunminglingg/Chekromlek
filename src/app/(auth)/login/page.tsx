@@ -10,7 +10,7 @@ interface dataTypes {
   password: string;
 }
 
-const pages = () => {
+const Pages = () => {
   const [data, setData] = useState<dataTypes>({
     email: "",
     password: "", 
@@ -73,8 +73,8 @@ const pages = () => {
                 <Image
                   alt="panel"
                   src={"login/logo.svg"}
-                  width={120}
-                  height={60}
+                  width={150}
+                  height={80}
                 />
               </button>
             </Link>
@@ -117,7 +117,8 @@ const pages = () => {
                         password{" "}
                       </span>{" "}
                       ?
-                    </p>
+
+                      </p>
                   </Link>
                 </div>
 
@@ -175,4 +176,4 @@ const pages = () => {
   );
 };
 
-export default pages;
+export default Pages;

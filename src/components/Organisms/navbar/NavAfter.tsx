@@ -1,12 +1,14 @@
+'use client'
 import { AfteLogin, Burger } from "@/components/Atoms";
 import Logo from "@/components/Atoms/Logo/Logo";
 import SearchInput from "@/components/Molecules/Search/SearchInput";
 import InputSearch from "@/components/Molecules/Search/SearchInput";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 function NavAfter() {
+  const [searchQuery, setSearchQuery] = useState<string>("");
   return (
     <nav className="fixed top-0 z-40 w-full bg-white border-b border-gray-20 ">
       <div className="px-3 py-3 lg:px-5 lg:pl-10 flex justify-between">
@@ -14,12 +16,12 @@ function NavAfter() {
           <Link href={"/afterlogin"}>
             <Logo />
           </Link>
-          <div className=" max-sm:w-auto ">
-            <SearchInput />
-          </div>
         </div>
-        
+        <div className=" mt-2   max-sm:me-[20%] max-md:me-[15%] max-sm:w-[160px]">
+          <SearchInput setSearch={setSearchQuery}/>
+        </div>
       <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
+       
           <AfteLogin/>
           <Link href={"#"}>
             <Image
@@ -30,9 +32,7 @@ function NavAfter() {
             />
           </Link>
         </div>
-
-       
-        <div className="block md:hidden   mt-3 absolute right-5">
+        <div className="block md:hidden   mt-4 absolute right-5">
           <Burger/>
         </div>
       </div>

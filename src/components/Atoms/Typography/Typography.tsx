@@ -3,7 +3,7 @@ interface TypoProps{
   children?:ReactNode;
   className?:string;
   align?:"left"|"center"|"right";
-  fontSize?:"bold"|"Medium"|"normal";
+  fontSize?:"header"|"title"|"caption"|"normal";
 }
 const Typography: React.FC<TypoProps> = ({children,className,align="left",fontSize="normal"}) => {
   const TypographyAlign=(align:string)=>{
@@ -18,12 +18,15 @@ const Typography: React.FC<TypoProps> = ({children,className,align="left",fontSi
   };
   const TypographyFont=(fontSize:string)=>{
     switch(fontSize){
-      case"bold":
-        return "font-bold";
-      case"Medium":
-        return "font-Medium";
+      // 24 , 20 , 16 , 14
+      case"header":
+      return "font-bold text-[24px]";
+      case"title":
+        return "font-bold text-[20px]"; 
+      case"caption":
+        return "font-medium";
       default:
-        return "normal";
+        return "normal text-[14px]";
     }
   }
   const typographyAlignStyles=TypographyAlign(align);

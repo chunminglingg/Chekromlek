@@ -3,6 +3,7 @@ import { ButtonCategories } from "@/components";
 import ButtonCategorieslist from "@/components/Organisms/ButtonCategorieslist/ButtonCategorieslist";
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -61,15 +62,16 @@ const page = () => {
   };
   return (
     <>
-      <div className="flex flex-col justify-start">
+      <div className="flex-row items-center justify-center max-md:mt-[3%] max-lg:mt-[2%] ">
         <div className="text-2xl font-semibold  text-[#343A40]">Categories</div>
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <div className="text-lg pt-2 font-medium text-[#6C757D] opacity-[60%]">
-              Education
+            <div className="flex flex-row gap-3 items-start pt-2 ">
+              <Image src={"icons/edu.svg"} alt="education-icon" width={24} height={24} />
+              <p className="text-lg ont-medium text-[#6C757D] opacity-[60%]">Education</p>
             </div>
 
-            <div className="grid grid-cols-1 justify-start gap-4">
+            <div className="grid grid-cols-1 justify-start">
               {displayedCategories.map((category) => (
                 <Link href={category.href} key={category.title}>
                   <ButtonCategories
@@ -91,8 +93,9 @@ const page = () => {
             )}
           </div>
 
-          <div className="text-lg pt-2 font-medium  text-[#6C757D] opacity-[60%]">
-            General Content
+          <div className="flex flex-row gap-3 items-start pt-2 ">
+          <Image src={"icons/gnk.svg"} alt="education-icon" width={24} height={24} />
+           <p className="text-lg text-[#6C757D] opacity-[60%]">General Content</p>
           </div>
           <div className="grid grid-cols-1 justify-start">
             <Link href={"/categories/generalknowledge"}>

@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Viewpost() {
   return (
-    <div className="max-sm:mt-[5%] md:mt-[12%] max-md:mt-[12%] lg:mt-[7%] min-lg:mt-[9%]">
+    <div className="max-sm:mt-[8%] sm:mt-[14%] md:mt-[12%] max-md:mt-[10%] lg:mt-[9%] min-lg:mt-[9%]">
       <div className=" w-[430px] max-sm:w-[345px] max-sm:mt-[20%] min-sm:mt-[20%] h-auto border rounded-md translate-x-1 max-md:mt-[5%]">
         <div className="flex flex-col ">
           <ViewPost

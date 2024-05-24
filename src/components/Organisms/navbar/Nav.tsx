@@ -1,12 +1,16 @@
-import { Burger } from "@/components/Atoms";
+'use client'
+import { Burger } from "@/components/Atoms"
 import Logo from "@/components/Atoms/Logo/Logo";
 import SearchInput from "@/components/Molecules/Search/SearchInput";
-import InputSearch from "@/components/Molecules/Search/SearchInput";
+import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 function navbar() {
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <nav className="fixed top-0 z-40 w-full bg-white border-b border-gray-20 ">
       <div className="px-3 py-3 lg:px-5 lg:pl-10 flex justify-between">
@@ -14,10 +18,12 @@ function navbar() {
           <Link href={"/"}>
             <Logo />
           </Link>
-          <div className="hidden lg:block ">
-            <SearchInput />
           </div>
-        </div>
+          <div className="mt-2   max-sm:me-[20%] max-md:me-[15%] max-sm:w-[160px]">   
+          {/* */}
+          <SearchInput setSearch={setSearchQuery}/>
+          </div>
+        
         <div className="hidden md:flex md:flex-row gap-4 items-center pr-8">
           <Link href={"#"}>
             <Image
@@ -43,6 +49,6 @@ function navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default navbar;

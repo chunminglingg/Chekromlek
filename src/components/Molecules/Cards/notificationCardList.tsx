@@ -13,6 +13,11 @@ const items = [
     image: "/card-svg/avatar.svg",
     userName: "Tan Hanshangpho",
   },
+  {
+    id: "3",
+    image: "/card-svg/avatar.svg",
+    userName: "Sokleng",
+  },
 ];
 
 const NotificationCardList = () => {

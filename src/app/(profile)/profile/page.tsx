@@ -8,9 +8,9 @@ const page = () => {
     <>
       <div className="content flex flex-col justify-center items-center">
         <div className="h-[90px]"></div>
-        <div className="card-header w-[680px] min-sm:w-[230px] max-sm:w-[510px] h-[186px] shadow-md rounded-2xl flex justify-between items-center relative border">
+        <div className="card-header w-[680px] min-sm:w-[230px] max-sm:w-[380px] h-[186px] shadow-md rounded-2xl flex justify-between items-center relative border">
           <div className="header-left flex flex-row gap-4 pl-10">
-            <div className="user-profile">
+            <div className="user-profile max-sm:mt-2">
               <Image
                 alt="profile"
                 src={"/card-svg/avatar.svg"}
@@ -19,15 +19,15 @@ const page = () => {
               />
             </div>
             <div className="user-infor flex flex-col">
-              <div className="user-name font-medium text-[30px] text-[#343A40] max-sm:text-xl">
+              <div className="user-name font-medium text-[30px] text-[#343A40] max-sm:text-[14px] ">
                 Kimlang Tieng
               </div>
               <div className="been-post text-[#6C757D] text-[15px] font-sans flex flex-row gap-10">
                 <p>82 Posts</p>
                 <p>82 Answers</p>
               </div>
-              <div className="Category text-[#6C757D] text-[15px] font-medium">
-                Web Designer
+              <div className="Category text-[#623cbb] text-[15px] font-medium">
+                #Web Designer
               </div>
               <div className="bio text-[#6C757D] font-light text-base">
                 Here is my bio of my account
@@ -41,7 +41,7 @@ const page = () => {
             </button> */}
           </div>
         </div>
-        <div className="button-card w-[663px] max-sm:w-[350px] h-[70px]  rounded-tl-2xl rounded-tr-2xl border shadow-md flex flex-row justify-evenly items-center mt-4 ">
+        <div className="button-card w-[663px] max-sm:w-[350px] h-[70px] border-b flex flex-row justify-evenly items-center mt-4 ">
           <div className="left hover:opacity-[60%]">
             <button className="flex flex-row gap-1">
               <p>Post</p>
